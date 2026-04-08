@@ -1,0 +1,19 @@
+---
+title: "Actividad 2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+lang: es
+---
+
+# Nombres
+* Pesantez Palacios Gabriel Napoleon
+* Marin Macao Carlos Enrique
+
+# Materia
+Visualización de datos
+
+# Introducción:
+
+Se analiza la distribución de la masa corporal en pingüinos según especie, isla y sexo mediante boxplots y gráficos complementarios. Se identifican diferencias significativas entre grupos, destacando mayor masa en machos y en la especie Gentoo. Un heatmap permite observar la relación entre especies e islas, evidenciando que algunas especies son exclusivas de determinadas ubicaciones.

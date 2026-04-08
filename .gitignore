@@ -1,0 +1,9 @@
+# Python
+.venv
+
+# Quarto
+_site/
+.quarto/
+/.quarto/
+*_files/
+**/*.quarto_ipynb
