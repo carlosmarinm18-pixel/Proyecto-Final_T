@@ -29,7 +29,7 @@ df_clima = pd.read_csv('Clima - Hoja 1.csv')
 ## Base de datos
 
 ```{python}
-# Visualizacón de la base de datos de rudio
+# Visualizacón de la base de datos de ruido
 df_ruido.head() 
 ```
 
