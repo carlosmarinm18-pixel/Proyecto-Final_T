@@ -5,7 +5,6 @@ toc: true
 toc-depth: 3
 lang: es
 ---
-# **Análisis de Ruido Urbano**
 
 ### Importación de librerías
 
@@ -22,7 +21,7 @@ alt.theme.enable('fivethirtyeight')
 df_final = pd.read_csv("df_final.csv")
 ```
 
-## * **¿Cómo cambian los niveles de ruido a lo largo de un mes completo?**   
+## **¿Cómo cambian los niveles de ruido a lo largo de un mes completo?**   
 
 ###  Preparación de datos
 
@@ -136,7 +135,15 @@ dashboard_final = (grafico_linea & mapa_calor).configure_axis(
 dashboard_final
 ```
 
-## * **¿Hay una diferencia significativa en los decibeles según el estado del cielo (soleado, lluvia, niebla)?**
+### Conclusión
+
+El análisis del ritmo y densidad acústica evidencia un patrón diario claramente estructurado. A partir de las 6:00 a.m. el nivel de ruido se incrementa de forma abrupta, manteniéndose por encima de los 70 dB durante aproximadamente 16 horas continuas, lo que indica una exposición prolongada a niveles de ruido.
+
+El mapa de calor muestra que el único periodo de disminución significativa del ruido ocurre entre la 1:00 a.m. y las 5:00 a.m., considerado como la principal ventana de descanso acústico. No obstante, se observan eventos aislados de ruido en horas nocturnas, lo que sugiere interrupciones puntuales del silencio.
+
+La zona presenta una exposición acústica constante durante el día, con un único periodo reducido de baja intensidad en la madrugada, reflejando un entorno urbano de alta carga sonora sostenida.
+
+## **¿Hay una diferencia significativa en los decibeles según el estado del cielo (soleado, lluvia, niebla)?**
 
 ### Base del gráfico
 
@@ -230,7 +237,16 @@ grafico_clima_impacto = grafico_clima_impacto.configure_axisX(
 grafico_clima_impacto 
 ```
 
-## * **¿Cuáles son las "horas pico" de ruido y existe un ciclo diario predecible?** 
+### Conclusión
+
+El análisis comparativo de los diferentes estados climáticos evidencia que el ruido en la zona no depende de las condiciones atmosféricas. Incluso en escenarios como la niebla moderada, los niveles promedio superan los 70 dB, alcanzando valores similares o superiores a los observados en días despejados o soleados.
+
+Aunque en condiciones de lluvia ligera se observa una mayor dispersión hacia valores más bajos, los promedios de todas las categorías climáticas se mantienen cercanos al umbral de riesgo.
+
+La contaminación acústica se mantiene constante independientemente del estado del clima, lo que confirma que su origen está asociado principalmente a la actividad urbana y no a factores naturales.
+
+
+## **¿Cuáles son las "horas pico" de ruido y existe un ciclo diario predecible?** 
 
 ### Mapa de Calor
 ```{python}
@@ -314,8 +330,16 @@ grafica_1.configure_axis(
 )
 ```
 
+### Conclusión
 
-## * **¿Existe una correlación directa entre la temperatura y el ruido registrado?** 
+El análisis del patrón semanal del ruido evidencia una relación directa con la actividad humana. Durante los días laborales, el nivel de ruido supera los 70 dB desde aproximadamente las 6:00 a.m., manteniéndose elevado a lo largo del día debido al tráfico y las actividades comerciales.
+
+En contraste, durante el fin de semana se observa un cambio en el comportamiento, con un desplazamiento del ruido hacia horas más nocturnas, especialmente entre la noche del viernes y la madrugada del sábado, lo que refleja dinámicas asociadas al ocio.
+
+La contaminación acústica presenta un patrón claramente estructurado por los horarios de la ciudad, con mayor actividad en días laborables y un comportamiento más nocturno durante el fin de semana.
+
+
+## **¿Existe una correlación directa entre la temperatura y el ruido registrado?** 
 
 ### Visualización de la Densidad de Eventos: Relación entre Temperatura Ambiente y Contaminación Sonora
 
@@ -372,7 +396,11 @@ correlacion_grafica = alt.vconcat(
 correlacion_grafica
 ```
 
-## * **¿De qué manera afectan las lluvias intensas a los niveles acústicos de la zona?**  
+### Conclusión
+
+El análisis de la relación entre temperatura y ruido mediante el mapa de calor muestra que la mayor concentración de registros se presenta alrededor de los 17 °C, manteniéndose el nivel de ruido cercano a los 70 dB. Los histogramas complementarios confirman que, a pesar de las variaciones de temperatura a lo largo del día, el ruido urbano se mantiene constante y elevado.
+
+## **¿De qué manera afectan las lluvias intensas a los niveles acústicos de la zona?**  
 
 ### Segmentación de Precipitaciones
 
@@ -429,3 +457,8 @@ grafico_final = (boxplot + umbral).properties(
 
 grafico_final
 ```
+
+
+### Conclusión
+
+Los resultados muestran que la lluvia no reduce el ruido ambiental. Independientemente del nivel de precipitación, el ruido se mantiene cercano a los 70 dB, lo que evidencia una alta persistencia del nivel sonoro urbano. Además, la lluvia tiende a disminuir los momentos de menor ruido, generando un ambiente más constante debido al impacto del agua y al contacto de los vehículos con el pavimento mojado. La contaminación acústica en la zona analizada está principalmente asociada al tráfico y la actividad humana, por lo que no depende de las condiciones climáticas.
