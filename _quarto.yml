@@ -3,14 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Actividad 2"
+  title: "Proyecto Final"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - href: About.qmd
-        text: About
-
+        text: Inicio
+      - href: data_cleaning.qmd
+        text: Limpieza y Preprocesamiento
+      - href: visualizations.qmd
+        text: Visualización de Datos 
 format:
   html:
     theme: cosmo

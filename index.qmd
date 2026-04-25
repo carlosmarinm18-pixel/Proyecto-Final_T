@@ -1,19 +1,54 @@
 ---
-title: "Actividad 2"
+title: "Análisis de Ruido Ambiental y Variabilidad Climática"
+subtitle: "Estudio de sensor de ruido — Marzo 2026"
+author: "Carlos Marín / Proyecto de Visualización de Datos"
+date: "2026-04-25"
 format:
   html:
+    theme: cosmo
     toc: true
-    toc-depth: 3
+    toc-title: "Contenido del Proyecto"
+    number-sections: false
+    code-fold: true
+    embed-resources: true
 lang: es
 ---
 
-# Nombres
-* Pesantez Palacios Gabriel Napoleon
-* Marin Macao Carlos Enrique
+## 1. Contexto del Problema
+La contaminación acústica en las ciudades suele pasar desapercibida porque no se ve, pero eso no significa que no afecte. El ruido constante del tráfico, las construcciones o la actividad urbana termina acumulándose y tiene consecuencias reales en la vida de las personas. Puede provocar estrés continuo, dificultades para dormir y, en general, un deterioro en la calidad de vida.
 
-# Materia
-Visualización de datos
+Por eso, monitorear el ruido de forma constante es clave. Solo así se puede entender cómo se comporta en distintos espacios y momentos, y tomar decisiones que ayuden a mejorar el entorno urbano y el bienestar de quienes viven en él.
 
-# Introducción:
+## 2. Motivación del Análisis
+Este proyecto nace de la necesidad de entender no solo el ruido como una constante urbana, sino como un fenómeno influenciado por el entorno físico. Factores climáticos como la temperatura, la lluvia o la neblina no solo afectan la propagación física del sonido, sino que también modifican el comportamiento humano y el flujo del tráfico. El sensor nos permite cruzar estos datos para descubrir patrones que no son evidentes a simple vista.
 
-Se analiza la distribución de la masa corporal en pingüinos según especie, isla y sexo mediante boxplots y gráficos complementarios. Se identifican diferencias significativas entre grupos, destacando mayor masa en machos y en la especie Gentoo. Un heatmap permite observar la relación entre especies e islas, evidenciando que algunas especies son exclusivas de determinadas ubicaciones.
+## 3. Preguntas Analíticas
+Para este estudio, nos planteamos las siguientes interrogantes:
+
+* **¿Cómo cambian los niveles de ruido a lo largo de un mes completo?**  
+* **¿Cuáles son las "horas pico" de ruido y existe un ciclo diario predecible?** 
+* **¿Hay una diferencia significativa en los decibeles según el estado del cielo (soleado, lluvia, niebla)?** 
+* **¿Existe una correlación directa entre la temperatura y el ruido registrado?**  
+* **¿De qué manera afectan las lluvias intensas a los niveles acústicos de la zona?**  
+
+## 4. Descripción de los Datos
+El análisis integra dos fuentes de datos principales correspondientes al periodo del **1 al 31 de marzo de 2026** de la Ciudad de Cuenca:
+
+| Dataset | Descripción | Registros | Variables Clave |
+| :--- | :--- | :--- | :--- |
+| **IERSE** | Mediciones acústicas en tiempo real | [Cada 20 min.] | dB, Fecha, Hora|
+| **Clima** | Condiciones meteorológicas horarias | [Cada 1h.] | Temp (°C), Precipitación (mm), Tipo de Clima |
+
+**Resumen del Periodo:**
+
+* **Ruido:** Rango entre 46.87 dB y 86.99 dB.
+
+* **Temperatura:** Oscilación entre 1.8 °C y 21.2 °C.
+
+## 5. Estructura del Proyecto
+Puedes explorar el desarrollo completo del análisis a través de las siguientes secciones:
+
+* **[Limpieza y Preparación de Datos](data_cleaning.html):** Proceso de unificación de datasets y tratamiento de valores atípicos.
+* **[Visualización de Datos ](visualizations.html):** Exploración visual profunda y respuestas a las preguntas analíticas.
+
+---

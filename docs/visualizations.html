@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Actividad 2</title>
+<title>Análisis de Ruido Urbano – Proyecto Final</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Actividad 2</span>
+    <span class="navbar-title">Proyecto Final</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -141,8 +141,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Limpieza y Preprocesamiento</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./About.html" aria-current="page"> 
-<span class="menu-text">Visualizaciones</span></a>
+    <a class="nav-link active" href="./visualizations.html" aria-current="page"> 
+<span class="menu-text">Visualización de Datos</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -160,20 +160,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#cargar-dataset" id="toc-cargar-dataset" class="nav-link active" data-scroll-target="#cargar-dataset">Cargar dataset</a></li>
+  <li><a href="#análisis-de-ruido-urbano" id="toc-análisis-de-ruido-urbano" class="nav-link active" data-scroll-target="#análisis-de-ruido-urbano"><strong>Análisis de Ruido Urbano</strong></a>
+  <ul class="collapse">
+  <li><a href="#importación-de-librerías" id="toc-importación-de-librerías" class="nav-link" data-scroll-target="#importación-de-librerías">Importación de librerías</a></li>
+  <li><a href="#cargarmos-el-dataset" id="toc-cargarmos-el-dataset" class="nav-link" data-scroll-target="#cargarmos-el-dataset">Cargarmos el dataset</a></li>
+  <li><a href="#cómo-cambian-los-niveles-de-ruido-a-lo-largo-de-un-mes-completo" id="toc-cómo-cambian-los-niveles-de-ruido-a-lo-largo-de-un-mes-completo" class="nav-link" data-scroll-target="#cómo-cambian-los-niveles-de-ruido-a-lo-largo-de-un-mes-completo">* <strong>¿Cómo cambian los niveles de ruido a lo largo de un mes completo?</strong></a>
+  <ul class="collapse">
   <li><a href="#preparación-de-datos" id="toc-preparación-de-datos" class="nav-link" data-scroll-target="#preparación-de-datos">Preparación de datos</a></li>
   <li><a href="#fondo-por-franjas-horarias" id="toc-fondo-por-franjas-horarias" class="nav-link" data-scroll-target="#fondo-por-franjas-horarias">Fondo por franjas horarias</a></li>
   <li><a href="#línea-de-tendencia" id="toc-línea-de-tendencia" class="nav-link" data-scroll-target="#línea-de-tendencia">Línea de tendencia</a></li>
   <li><a href="#puntos" id="toc-puntos" class="nav-link" data-scroll-target="#puntos">Puntos</a></li>
   <li><a href="#gráfico-combinado" id="toc-gráfico-combinado" class="nav-link" data-scroll-target="#gráfico-combinado">Gráfico combinado</a></li>
-  <li><a href="#mapa-de-calor" id="toc-mapa-de-calor" class="nav-link" data-scroll-target="#mapa-de-calor">MAPA DE CALOR</a></li>
-  <li><a href="#dashboard-final" id="toc-dashboard-final" class="nav-link" data-scroll-target="#dashboard-final">DASHBOARD FINAL</a></li>
+  <li><a href="#mapa-de-calor" id="toc-mapa-de-calor" class="nav-link" data-scroll-target="#mapa-de-calor">Mapa de calor</a></li>
+  <li><a href="#dashbord-final" id="toc-dashbord-final" class="nav-link" data-scroll-target="#dashbord-final">Dashbord final</a></li>
+  </ul></li>
+  <li><a href="#hay-una-diferencia-significativa-en-los-decibeles-según-el-estado-del-cielo-soleado-lluvia-niebla" id="toc-hay-una-diferencia-significativa-en-los-decibeles-según-el-estado-del-cielo-soleado-lluvia-niebla" class="nav-link" data-scroll-target="#hay-una-diferencia-significativa-en-los-decibeles-según-el-estado-del-cielo-soleado-lluvia-niebla">* <strong>¿Hay una diferencia significativa en los decibeles según el estado del cielo (soleado, lluvia, niebla)?</strong></a>
+  <ul class="collapse">
   <li><a href="#base-del-gráfico" id="toc-base-del-gráfico" class="nav-link" data-scroll-target="#base-del-gráfico">Base del gráfico</a></li>
   <li><a href="#puntos-todos-los-datos" id="toc-puntos-todos-los-datos" class="nav-link" data-scroll-target="#puntos-todos-los-datos">Puntos (todos los datos)</a></li>
   <li><a href="#promedio-por-clima" id="toc-promedio-por-clima" class="nav-link" data-scroll-target="#promedio-por-clima">Promedio por clima</a></li>
   <li><a href="#línea-de-umbral" id="toc-línea-de-umbral" class="nav-link" data-scroll-target="#línea-de-umbral">Línea de umbral</a></li>
   <li><a href="#combinado" id="toc-combinado" class="nav-link" data-scroll-target="#combinado">combinado</a></li>
   <li><a href="#estilo-final" id="toc-estilo-final" class="nav-link" data-scroll-target="#estilo-final">Estilo final</a></li>
+  </ul></li>
+  <li><a href="#cuáles-son-las-horas-pico-de-ruido-y-existe-un-ciclo-diario-predecible" id="toc-cuáles-son-las-horas-pico-de-ruido-y-existe-un-ciclo-diario-predecible" class="nav-link" data-scroll-target="#cuáles-son-las-horas-pico-de-ruido-y-existe-un-ciclo-diario-predecible">* <strong>¿Cuáles son las “horas pico” de ruido y existe un ciclo diario predecible?</strong></a>
+  <ul class="collapse">
+  <li><a href="#mapa-de-calor-1" id="toc-mapa-de-calor-1" class="nav-link" data-scroll-target="#mapa-de-calor-1">Mapa de Calor</a></li>
+  </ul></li>
+  <li><a href="#existe-una-correlación-directa-entre-la-temperatura-y-el-ruido-registrado" id="toc-existe-una-correlación-directa-entre-la-temperatura-y-el-ruido-registrado" class="nav-link" data-scroll-target="#existe-una-correlación-directa-entre-la-temperatura-y-el-ruido-registrado">* <strong>¿Existe una correlación directa entre la temperatura y el ruido registrado?</strong></a>
+  <ul class="collapse">
+  <li><a href="#visualización-de-la-densidad-de-eventos-relación-entre-temperatura-ambiente-y-contaminación-sonora" id="toc-visualización-de-la-densidad-de-eventos-relación-entre-temperatura-ambiente-y-contaminación-sonora" class="nav-link" data-scroll-target="#visualización-de-la-densidad-de-eventos-relación-entre-temperatura-ambiente-y-contaminación-sonora">Visualización de la Densidad de Eventos: Relación entre Temperatura Ambiente y Contaminación Sonora</a></li>
+  </ul></li>
+  <li><a href="#de-qué-manera-afectan-las-lluvias-intensas-a-los-niveles-acústicos-de-la-zona" id="toc-de-qué-manera-afectan-las-lluvias-intensas-a-los-niveles-acústicos-de-la-zona" class="nav-link" data-scroll-target="#de-qué-manera-afectan-las-lluvias-intensas-a-los-niveles-acústicos-de-la-zona">* <strong>¿De qué manera afectan las lluvias intensas a los niveles acústicos de la zona?</strong></a>
+  <ul class="collapse">
+  <li><a href="#segmentación-de-precipitaciones" id="toc-segmentación-de-precipitaciones" class="nav-link" data-scroll-target="#segmentación-de-precipitaciones">Segmentación de Precipitaciones</a></li>
+  <li><a href="#grafico-de-boxplot" id="toc-grafico-de-boxplot" class="nav-link" data-scroll-target="#grafico-de-boxplot">Grafico de Boxplot</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -182,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Actividad 2</h1>
+<h1 class="title">Análisis de Ruido Urbano</h1>
 </div>
 
 
@@ -199,142 +222,155 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="55dbc40a" class="cell" data-execution_count="1">
+<section id="análisis-de-ruido-urbano" class="level1">
+<h1><strong>Análisis de Ruido Urbano</strong></h1>
+<section id="importación-de-librerías" class="level3">
+<h3 class="anchored" data-anchor-id="importación-de-librerías">Importación de librerías</h3>
+<div id="3827bba6" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>alt.theme.enable(<span class="st">'fivethirtyeight'</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="729">
+<div class="cell-output cell-output-display" data-execution_count="353">
 <pre><code>ThemeRegistry.enable('fivethirtyeight')</code></pre>
 </div>
 </div>
-<hr>
-<section id="cargar-dataset" class="level1">
-<h1>Cargar dataset</h1>
-<div id="98e11f3e" class="cell" data-execution_count="2">
+</section>
+<section id="cargarmos-el-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="cargarmos-el-dataset">Cargarmos el dataset</h3>
+<div id="972f6f20" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_final <span class="op">=</span> pd.read_csv(<span class="st">"df_final.csv"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<hr>
 </section>
-<section id="preparación-de-datos" class="level1">
-<h1>Preparación de datos</h1>
-<div id="eaa08521" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_hora_promedio <span class="op">=</span> df_final.groupby(<span class="st">'Hora'</span>)[<span class="st">'Medición (dB)'</span>].mean().reset_index()</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>orden_franjas <span class="op">=</span> [<span class="st">'Madrugada'</span>, <span class="st">'Mañana'</span>, <span class="st">'Tarde'</span>, <span class="st">'Noche'</span>]</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df_fondo <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'inicio'</span>: [<span class="dv">0</span>, <span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>],</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fin'</span>: [<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>],</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Franja'</span>: [<span class="st">'Madrugada'</span>, <span class="st">'Mañana'</span>, <span class="st">'Tarde'</span>, <span class="st">'Noche'</span>]</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="cómo-cambian-los-niveles-de-ruido-a-lo-largo-de-un-mes-completo" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-cambian-los-niveles-de-ruido-a-lo-largo-de-un-mes-completo">* <strong>¿Cómo cambian los niveles de ruido a lo largo de un mes completo?</strong></h2>
+<section id="preparación-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="preparación-de-datos">Preparación de datos</h3>
+<div id="b6e8b800" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clasificamos las horas</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df_hora_promedio <span class="op">=</span> df_final.groupby(<span class="st">'Hora'</span>)[<span class="st">'Medición (dB)'</span>].mean().reset_index()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>orden_franjas <span class="op">=</span> [<span class="st">'Madrugada'</span>, <span class="st">'Mañana'</span>, <span class="st">'Tarde'</span>, <span class="st">'Noche'</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df_fondo <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'inicio'</span>: [<span class="dv">0</span>, <span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>],</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fin'</span>: [<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>],</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Franja'</span>: [<span class="st">'Madrugada'</span>, <span class="st">'Mañana'</span>, <span class="st">'Tarde'</span>, <span class="st">'Noche'</span>]</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="fondo-por-franjas-horarias" class="level1">
-<h1>Fondo por franjas horarias</h1>
-<div id="12f79d06" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fondo_sombras <span class="op">=</span> alt.Chart(df_fondo).mark_rect(opacity<span class="op">=</span><span class="fl">0.1</span>).encode(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'inicio:Q'</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    x2<span class="op">=</span><span class="st">'fin:Q'</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Franja:N'</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(domain<span class="op">=</span>orden_franjas, scheme<span class="op">=</span><span class="st">'category10'</span>),</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        legend<span class="op">=</span>alt.Legend(title<span class="op">=</span><span class="st">"Fase"</span>, orient<span class="op">=</span><span class="st">'right'</span>, labelFontSize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="fondo-por-franjas-horarias" class="level3">
+<h3 class="anchored" data-anchor-id="fondo-por-franjas-horarias">Fondo por franjas horarias</h3>
+<div id="6e362cda" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Colores diferentes para diferenciar los horarios </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fondo_sombras <span class="op">=</span> alt.Chart(df_fondo).mark_rect(opacity<span class="op">=</span><span class="fl">0.1</span>).encode(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'inicio:Q'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    x2<span class="op">=</span><span class="st">'fin:Q'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Franja:N'</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(domain<span class="op">=</span>orden_franjas, scheme<span class="op">=</span><span class="st">'category10'</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        legend<span class="op">=</span>alt.Legend(title<span class="op">=</span><span class="st">"Fase"</span>, orient<span class="op">=</span><span class="st">'right'</span>, labelFontSize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="línea-de-tendencia" class="level1">
-<h1>Línea de tendencia</h1>
-<div id="630125a4" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>linea_tendencia <span class="op">=</span> alt.Chart(df_hora_promedio).mark_line(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#1a1a1a'</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    strokeWidth<span class="op">=</span><span class="fl">2.5</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    interpolate<span class="op">=</span><span class="st">'monotone'</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>).encode(</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Hora:Q'</span>, title<span class="op">=</span><span class="va">None</span>, scale<span class="op">=</span>alt.Scale(domain<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">23</span>])),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Medición (dB):Q'</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="st">'dB Promedio'</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(zero<span class="op">=</span><span class="va">False</span>, domain<span class="op">=</span>[<span class="dv">60</span>, <span class="dv">78</span>])</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="línea-de-tendencia" class="level3">
+<h3 class="anchored" data-anchor-id="línea-de-tendencia">Línea de tendencia</h3>
+<div id="bbf8ff89" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Linea de tendencia en los diferentes horas </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>linea_tendencia <span class="op">=</span> alt.Chart(df_hora_promedio).mark_line(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#1a1a1a'</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    strokeWidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    interpolate<span class="op">=</span><span class="st">'monotone'</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>).encode(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Hora:Q'</span>, title<span class="op">=</span><span class="va">None</span>, scale<span class="op">=</span>alt.Scale(domain<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">23</span>])),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Medición (dB):Q'</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="st">'dB Promedio'</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(zero<span class="op">=</span><span class="va">False</span>, domain<span class="op">=</span>[<span class="dv">60</span>, <span class="dv">78</span>])</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="puntos" class="level1">
-<h1>Puntos</h1>
-<div id="98ee6b62" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>puntos_detalle <span class="op">=</span> alt.Chart(df_hora_promedio).mark_circle(size<span class="op">=</span><span class="dv">50</span>).encode(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Hora:Q'</span>,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'Medición (dB):Q'</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        alt.Tooltip(<span class="st">'Hora:Q'</span>, title<span class="op">=</span><span class="st">'Hora'</span>),</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        alt.Tooltip(<span class="st">'Medición (dB):Q'</span>, title<span class="op">=</span><span class="st">'dB promedio'</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    ],</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Medición (dB):Q'</span>,</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(scheme<span class="op">=</span><span class="st">'magma'</span>),</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        legend<span class="op">=</span><span class="va">None</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="puntos" class="level3">
+<h3 class="anchored" data-anchor-id="puntos">Puntos</h3>
+<div id="996bf0fa" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Puntos de la medicion horaria </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>puntos_detalle <span class="op">=</span> alt.Chart(df_hora_promedio).mark_circle(size<span class="op">=</span><span class="dv">50</span>).encode(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Hora:Q'</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'Medición (dB):Q'</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        alt.Tooltip(<span class="st">'Hora:Q'</span>, title<span class="op">=</span><span class="st">'Hora'</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        alt.Tooltip(<span class="st">'Medición (dB):Q'</span>, title<span class="op">=</span><span class="st">'dB promedio'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Medición (dB):Q'</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(scheme<span class="op">=</span><span class="st">'magma'</span>),</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        legend<span class="op">=</span><span class="va">None</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="gráfico-combinado" class="level1">
-<h1>Gráfico combinado</h1>
-<div id="f3e6d652" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grafico_linea <span class="op">=</span> (fondo_sombras <span class="op">+</span> linea_tendencia <span class="op">+</span> puntos_detalle).properties(</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">575</span>,</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">200</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span>alt.TitleParams(<span class="st">"Ritmo y Densidad Acústica"</span>, fontSize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="gráfico-combinado" class="level3">
+<h3 class="anchored" data-anchor-id="gráfico-combinado">Gráfico combinado</h3>
+<div id="2ee063cc" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Union de graficos</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>grafico_linea <span class="op">=</span> (fondo_sombras <span class="op">+</span> linea_tendencia <span class="op">+</span> puntos_detalle).properties(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">575</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">200</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span>alt.TitleParams(<span class="st">"Ritmo y Densidad Acústica"</span>, fontSize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="mapa-de-calor" class="level1">
-<h1>MAPA DE CALOR</h1>
-<div id="0f3067e7" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_final[<span class="st">'Fecha'</span>] <span class="op">=</span> pd.to_datetime(df_final[<span class="st">'Fecha'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_final[<span class="st">'Fecha_Etiqueta'</span>] <span class="op">=</span> df_final[<span class="st">'Fecha'</span>].dt.strftime(<span class="st">'</span><span class="sc">%d</span><span class="st">-%m'</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>mapa_calor <span class="op">=</span> alt.Chart(df_final).mark_rect().encode(</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Hora:O'</span>, title<span class="op">=</span><span class="st">'Hora (0-23)'</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=</span><span class="dv">0</span>)),</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'Fecha_Etiqueta:O'</span>, title<span class="op">=</span><span class="st">'Día/Mes'</span>),</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(<span class="st">'Medición (dB):Q'</span>, title<span class="op">=</span><span class="st">'dB'</span>, scale<span class="op">=</span>alt.Scale(scheme<span class="op">=</span><span class="st">'magma'</span>)),</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">'Fecha_Etiqueta'</span>, <span class="st">'Hora'</span>, <span class="st">'Medición (dB)'</span>]</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>).properties(</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">575</span>,</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">280</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="mapa-de-calor" class="level3">
+<h3 class="anchored" data-anchor-id="mapa-de-calor">Mapa de calor</h3>
+<div id="acb376c7" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformamos las fechas a su typo correspondiente</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_final[<span class="st">'Fecha'</span>] <span class="op">=</span> pd.to_datetime(df_final[<span class="st">'Fecha'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_final[<span class="st">'Fecha_Etiqueta'</span>] <span class="op">=</span> df_final[<span class="st">'Fecha'</span>].dt.strftime(<span class="st">'</span><span class="sc">%d</span><span class="st">-%m'</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos el mapa de calor</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>mapa_calor <span class="op">=</span> alt.Chart(df_final).mark_rect().encode(</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Hora:O'</span>, title<span class="op">=</span><span class="st">'Hora (0-23)'</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=</span><span class="dv">0</span>)),</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'Fecha_Etiqueta:O'</span>, title<span class="op">=</span><span class="st">'Día/Mes'</span>),</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(<span class="st">'Medición (dB):Q'</span>, title<span class="op">=</span><span class="st">'dB'</span>, scale<span class="op">=</span>alt.Scale(scheme<span class="op">=</span><span class="st">'magma'</span>)),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">'Fecha_Etiqueta'</span>, <span class="st">'Hora'</span>, <span class="st">'Medición (dB)'</span>]</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>).properties(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">575</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">280</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="dashboard-final" class="level1">
-<h1>DASHBOARD FINAL</h1>
-<div id="9ad0ed1a" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dashboard_final <span class="op">=</span> (grafico_linea <span class="op">&amp;</span> mapa_calor).configure_axis(</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    labelFontSize<span class="op">=</span><span class="dv">9</span>,</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    titleFontSize<span class="op">=</span><span class="dv">11</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>dashboard_final</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="737">
+<section id="dashbord-final" class="level3">
+<h3 class="anchored" data-anchor-id="dashbord-final">Dashbord final</h3>
+<div id="5b49ff34" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cnfiguramos label y title </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>dashboard_final <span class="op">=</span> (grafico_linea <span class="op">&amp;</span> mapa_calor).configure_axis(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    labelFontSize<span class="op">=</span><span class="dv">9</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    titleFontSize<span class="op">=</span><span class="dv">11</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>dashboard_final</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="361">
 
 <style>
-  #altair-viz-55b3fcc6ad564150883f973ef11d105a.vega-embed {
+  #altair-viz-0e34ceb98e6a4a1db54c785250e101de.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-55b3fcc6ad564150883f973ef11d105a.vega-embed details,
-  #altair-viz-55b3fcc6ad564150883f973ef11d105a.vega-embed details summary {
+  #altair-viz-0e34ceb98e6a4a1db54c785250e101de.vega-embed details,
+  #altair-viz-0e34ceb98e6a4a1db54c785250e101de.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-55b3fcc6ad564150883f973ef11d105a"></div>
+<div id="altair-viz-0e34ceb98e6a4a1db54c785250e101de"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-55b3fcc6ad564150883f973ef11d105a") {
-      outputDiv = document.getElementById("altair-viz-55b3fcc6ad564150883f973ef11d105a");
+    if (outputDiv.id !== "altair-viz-0e34ceb98e6a4a1db54c785250e101de") {
+      outputDiv = document.getElementById("altair-viz-0e34ceb98e6a4a1db54c785250e101de");
     }
 
     const paths = {
@@ -387,9 +423,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="base-del-gráfico" class="level1">
-<h1>Base del gráfico</h1>
-<div id="216d21b8" class="cell" data-execution_count="10">
+</section>
+<section id="hay-una-diferencia-significativa-en-los-decibeles-según-el-estado-del-cielo-soleado-lluvia-niebla" class="level2">
+<h2 class="anchored" data-anchor-id="hay-una-diferencia-significativa-en-los-decibeles-según-el-estado-del-cielo-soleado-lluvia-niebla">* <strong>¿Hay una diferencia significativa en los decibeles según el estado del cielo (soleado, lluvia, niebla)?</strong></h2>
+<section id="base-del-gráfico" class="level3">
+<h3 class="anchored" data-anchor-id="base-del-gráfico">Base del gráfico</h3>
+<div id="adfe8335" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> alt.Chart(df_final).encode(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'Clima:N'</span>, title<span class="op">=</span><span class="va">None</span>, sort<span class="op">=</span><span class="st">'-x'</span>),</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(</span>
@@ -400,9 +439,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="puntos-todos-los-datos" class="level1">
-<h1>Puntos (todos los datos)</h1>
-<div id="9b00d62e" class="cell" data-execution_count="11">
+<section id="puntos-todos-los-datos" class="level3">
+<h3 class="anchored" data-anchor-id="puntos-todos-los-datos">Puntos (todos los datos)</h3>
+<div id="eae15ff5" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>puntos_fondo <span class="op">=</span> base.mark_tick(opacity<span class="op">=</span><span class="fl">0.3</span>, size<span class="op">=</span><span class="dv">15</span>).encode(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.condition(</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'datum["Medición (dB)"] &gt; 70'</span>,</span>
@@ -412,9 +451,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="promedio-por-clima" class="level1">
-<h1>Promedio por clima</h1>
-<div id="0aaaddae" class="cell" data-execution_count="12">
+<section id="promedio-por-clima" class="level3">
+<h3 class="anchored" data-anchor-id="promedio-por-clima">Promedio por clima</h3>
+<div id="a807e58b" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>barras_promedio <span class="op">=</span> base.mark_tick(</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'#1a1a1a'</span>,</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    thickness<span class="op">=</span><span class="dv">4</span>,</span>
@@ -432,9 +471,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="línea-de-umbral" class="level1">
-<h1>Línea de umbral</h1>
-<div id="2d2404be" class="cell" data-execution_count="13">
+<section id="línea-de-umbral" class="level3">
+<h3 class="anchored" data-anchor-id="línea-de-umbral">Línea de umbral</h3>
+<div id="6bc69554" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>linea_umbral <span class="op">=</span> alt.Chart(</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    pd.DataFrame({<span class="st">'Umbral'</span>: [<span class="dv">70</span>]})</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>).mark_rule(</span>
@@ -446,11 +485,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Umbral:Q'</span></span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<hr>
 </section>
-<section id="combinado" class="level1">
-<h1>combinado</h1>
-<div id="18d16265" class="cell" data-execution_count="14">
+<section id="combinado" class="level3">
+<h3 class="anchored" data-anchor-id="combinado">combinado</h3>
+<div id="30b6989e" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>grafico_clima_impacto <span class="op">=</span> (</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    puntos_fondo <span class="op">+</span> barras_promedio <span class="op">+</span> linea_umbral</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>).properties(</span>
@@ -463,9 +501,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="estilo-final" class="level1">
-<h1>Estilo final</h1>
-<div id="e04a0bb2" class="cell" data-execution_count="15">
+<section id="estilo-final" class="level3">
+<h3 class="anchored" data-anchor-id="estilo-final">Estilo final</h3>
+<div id="ed0d5bc7" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>grafico_clima_impacto <span class="op">=</span> grafico_clima_impacto.configure_axisX(</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    gridOpacity<span class="op">=</span><span class="fl">0.4</span>,</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    gridDash<span class="op">=</span>[<span class="dv">2</span>, <span class="dv">2</span>]</span>
@@ -477,26 +515,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    stroke<span class="op">=</span><span class="va">None</span></span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>grafico_clima_impacto </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="743">
+<div class="cell-output cell-output-display" data-execution_count="367">
 
 <style>
-  #altair-viz-20b430035d4146d5b63f705f04d9fe54.vega-embed {
+  #altair-viz-1c519fcaa7ac4bc7999ae34fbcd24e1c.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-20b430035d4146d5b63f705f04d9fe54.vega-embed details,
-  #altair-viz-20b430035d4146d5b63f705f04d9fe54.vega-embed details summary {
+  #altair-viz-1c519fcaa7ac4bc7999ae34fbcd24e1c.vega-embed details,
+  #altair-viz-1c519fcaa7ac4bc7999ae34fbcd24e1c.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-20b430035d4146d5b63f705f04d9fe54"></div>
+<div id="altair-viz-1c519fcaa7ac4bc7999ae34fbcd24e1c"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-20b430035d4146d5b63f705f04d9fe54") {
-      outputDiv = document.getElementById("altair-viz-20b430035d4146d5b63f705f04d9fe54");
+    if (outputDiv.id !== "altair-viz-1c519fcaa7ac4bc7999ae34fbcd24e1c") {
+      outputDiv = document.getElementById("altair-viz-1c519fcaa7ac4bc7999ae34fbcd24e1c");
     }
 
     const paths = {
@@ -548,7 +586,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 </div>
 </div>
-<div id="ab3f0d52" class="cell" data-execution_count="16">
+</section>
+</section>
+<section id="cuáles-son-las-horas-pico-de-ruido-y-existe-un-ciclo-diario-predecible" class="level2">
+<h2 class="anchored" data-anchor-id="cuáles-son-las-horas-pico-de-ruido-y-existe-un-ciclo-diario-predecible">* <strong>¿Cuáles son las “horas pico” de ruido y existe un ciclo diario predecible?</strong></h2>
+<section id="mapa-de-calor-1" class="level3">
+<h3 class="anchored" data-anchor-id="mapa-de-calor-1">Mapa de Calor</h3>
+<div id="bf88df61" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Asegurar formato de fecha</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_final[<span class="st">'Fecha'</span>] <span class="op">=</span> pd.to_datetime(df_final[<span class="st">'Fecha'</span>])</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -577,7 +621,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Patrón Semanal de Contaminación Acústica"</span></span>
 <span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="c324cb4c" class="cell" data-execution_count="17">
+<div id="2bee5675" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Área con gradiente</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>area_elegante <span class="op">=</span> alt.Chart(df_final).mark_area(</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span>{<span class="st">'color'</span>:<span class="st">'#2c3e50'</span>},</span>
@@ -609,11 +653,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico final</span></span>
 <span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>grafica_pro <span class="op">=</span> area_elegante <span class="op">+</span> puntos <span class="op">+</span> linea_salud</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="97ce5601" class="cell" data-execution_count="18">
+<div id="1f6cb201" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Unión vertical de gráficos</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>grafica_1 <span class="op">=</span> grafica_pro <span class="op">&amp;</span> heatmap_semanal</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="7a67ad54" class="cell" data-execution_count="19">
+<div id="beea1097" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Unión verti</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>grafica_1.configure_axis(</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    labelFontSize<span class="op">=</span><span class="dv">11</span>,</span>
@@ -624,26 +668,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>).configure_view(</span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    stroke<span class="op">=</span><span class="va">None</span></span>
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="747">
+<div class="cell-output cell-output-display" data-execution_count="371">
 
 <style>
-  #altair-viz-fe2c8a1c57f24cbd90f1a422a6b377d5.vega-embed {
+  #altair-viz-710d6bbd3d4e4e7aaa71ffaf32819d6c.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-fe2c8a1c57f24cbd90f1a422a6b377d5.vega-embed details,
-  #altair-viz-fe2c8a1c57f24cbd90f1a422a6b377d5.vega-embed details summary {
+  #altair-viz-710d6bbd3d4e4e7aaa71ffaf32819d6c.vega-embed details,
+  #altair-viz-710d6bbd3d4e4e7aaa71ffaf32819d6c.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-fe2c8a1c57f24cbd90f1a422a6b377d5"></div>
+<div id="altair-viz-710d6bbd3d4e4e7aaa71ffaf32819d6c"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fe2c8a1c57f24cbd90f1a422a6b377d5") {
-      outputDiv = document.getElementById("altair-viz-fe2c8a1c57f24cbd90f1a422a6b377d5");
+    if (outputDiv.id !== "altair-viz-710d6bbd3d4e4e7aaa71ffaf32819d6c") {
+      outputDiv = document.getElementById("altair-viz-710d6bbd3d4e4e7aaa71ffaf32819d6c");
     }
 
     const paths = {
@@ -695,7 +739,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 </div>
 </div>
-<div id="649ad7c8" class="cell" data-execution_count="20">
+</section>
+</section>
+<section id="existe-una-correlación-directa-entre-la-temperatura-y-el-ruido-registrado" class="level2">
+<h2 class="anchored" data-anchor-id="existe-una-correlación-directa-entre-la-temperatura-y-el-ruido-registrado">* <strong>¿Existe una correlación directa entre la temperatura y el ruido registrado?</strong></h2>
+<section id="visualización-de-la-densidad-de-eventos-relación-entre-temperatura-ambiente-y-contaminación-sonora" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-de-la-densidad-de-eventos-relación-entre-temperatura-ambiente-y-contaminación-sonora">Visualización de la Densidad de Eventos: Relación entre Temperatura Ambiente y Contaminación Sonora</h3>
+<div id="500dfc6d" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. El cuerpo central: Mapa de densidad (Heatmap) con Tooltip</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>main <span class="op">=</span> alt.Chart(df_final).mark_rect().encode(</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Temperatura (°C):Q'</span>, <span class="bu">bin</span><span class="op">=</span>alt.Bin(maxbins<span class="op">=</span><span class="dv">30</span>), title<span class="op">=</span><span class="st">'Temperatura (°C)'</span>),</span>
@@ -746,26 +796,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a>correlacion_grafica</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="748">
+<div class="cell-output cell-output-display" data-execution_count="372">
 
 <style>
-  #altair-viz-d9c05dd7841245c5b335094b2377592d.vega-embed {
+  #altair-viz-115fa5b7ff084a55afe732b1b61b8795.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-d9c05dd7841245c5b335094b2377592d.vega-embed details,
-  #altair-viz-d9c05dd7841245c5b335094b2377592d.vega-embed details summary {
+  #altair-viz-115fa5b7ff084a55afe732b1b61b8795.vega-embed details,
+  #altair-viz-115fa5b7ff084a55afe732b1b61b8795.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-d9c05dd7841245c5b335094b2377592d"></div>
+<div id="altair-viz-115fa5b7ff084a55afe732b1b61b8795"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d9c05dd7841245c5b335094b2377592d") {
-      outputDiv = document.getElementById("altair-viz-d9c05dd7841245c5b335094b2377592d");
+    if (outputDiv.id !== "altair-viz-115fa5b7ff084a55afe732b1b61b8795") {
+      outputDiv = document.getElementById("altair-viz-115fa5b7ff084a55afe732b1b61b8795");
     }
 
     const paths = {
@@ -817,7 +867,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 </div>
 </div>
-<div id="2e38162f" class="cell" data-execution_count="21">
+</section>
+</section>
+<section id="de-qué-manera-afectan-las-lluvias-intensas-a-los-niveles-acústicos-de-la-zona" class="level2">
+<h2 class="anchored" data-anchor-id="de-qué-manera-afectan-las-lluvias-intensas-a-los-niveles-acústicos-de-la-zona">* <strong>¿De qué manera afectan las lluvias intensas a los niveles acústicos de la zona?</strong></h2>
+<section id="segmentación-de-precipitaciones" class="level3">
+<h3 class="anchored" data-anchor-id="segmentación-de-precipitaciones">Segmentación de Precipitaciones</h3>
+<div id="4a84679f" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cat_precip(p):</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p <span class="op">==</span> <span class="dv">0</span>:      <span class="cf">return</span> <span class="st">'Sin lluvia'</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> p <span class="op">&lt;</span> <span class="fl">0.5</span>:   <span class="cf">return</span> <span class="st">'Ligera'</span></span>
@@ -840,7 +896,10 @@ Name: count, dtype: int64
 Nulls: 0</code></pre>
 </div>
 </div>
-<div id="9f251984" class="cell" data-execution_count="22">
+</section>
+<section id="grafico-de-boxplot" class="level3">
+<h3 class="anchored" data-anchor-id="grafico-de-boxplot">Grafico de Boxplot</h3>
+<div id="774e3407" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>orden_lluvia <span class="op">=</span> [<span class="st">'Sin lluvia'</span>, <span class="st">'Ligera'</span>, <span class="st">'Moderada'</span>, <span class="st">'Fuerte'</span>]</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>boxplot <span class="op">=</span> alt.Chart(df_final).mark_boxplot(</span>
@@ -875,26 +934,26 @@ Nulls: 0</code></pre>
 <span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>grafico_final</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="750">
+<div class="cell-output cell-output-display" data-execution_count="374">
 
 <style>
-  #altair-viz-b9d7d12afa88488ea0dc8849961bef4c.vega-embed {
+  #altair-viz-c9ae0dfc6c884170afad758ada9bd341.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-b9d7d12afa88488ea0dc8849961bef4c.vega-embed details,
-  #altair-viz-b9d7d12afa88488ea0dc8849961bef4c.vega-embed details summary {
+  #altair-viz-c9ae0dfc6c884170afad758ada9bd341.vega-embed details,
+  #altair-viz-c9ae0dfc6c884170afad758ada9bd341.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-b9d7d12afa88488ea0dc8849961bef4c"></div>
+<div id="altair-viz-c9ae0dfc6c884170afad758ada9bd341"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b9d7d12afa88488ea0dc8849961bef4c") {
-      outputDiv = document.getElementById("altair-viz-b9d7d12afa88488ea0dc8849961bef4c");
+    if (outputDiv.id !== "altair-viz-c9ae0dfc6c884170afad758ada9bd341") {
+      outputDiv = document.getElementById("altair-viz-c9ae0dfc6c884170afad758ada9bd341");
     }
 
     const paths = {
@@ -948,6 +1007,8 @@ Nulls: 0</code></pre>
 </div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,0 +1,431 @@
+---
+title: "Análisis de Ruido Urbano"
+format: html
+toc: true
+toc-depth: 3
+lang: es
+---
+# **Análisis de Ruido Urbano**
+
+### Importación de librerías
+
+```{python}
+import pandas as pd
+import altair as alt
+
+alt.theme.enable('fivethirtyeight')
+```
+
+### Cargarmos el dataset 
+
+```{python}
+df_final = pd.read_csv("df_final.csv")
+```
+
+## * **¿Cómo cambian los niveles de ruido a lo largo de un mes completo?**   
+
+###  Preparación de datos
+
+```{python}
+# Clasificamos las horas
+df_hora_promedio = df_final.groupby('Hora')['Medición (dB)'].mean().reset_index()
+
+orden_franjas = ['Madrugada', 'Mañana', 'Tarde', 'Noche']
+
+df_fondo = pd.DataFrame({
+    'inicio': [0, 6, 12, 18],
+    'fin': [6, 12, 18, 24],
+    'Franja': ['Madrugada', 'Mañana', 'Tarde', 'Noche']
+})
+```
+
+
+### Fondo por franjas horarias
+
+```{python}
+# Colores diferentes para diferenciar los horarios 
+fondo_sombras = alt.Chart(df_fondo).mark_rect(opacity=0.1).encode(
+    x='inicio:Q',
+    x2='fin:Q',
+    color=alt.Color(
+        'Franja:N',
+        scale=alt.Scale(domain=orden_franjas, scheme='category10'),
+        legend=alt.Legend(title="Fase", orient='right', labelFontSize=10)
+    )
+)
+```
+
+### Línea de tendencia
+
+```{python}
+# Linea de tendencia en los diferentes horas 
+linea_tendencia = alt.Chart(df_hora_promedio).mark_line(
+    color='#1a1a1a',
+    strokeWidth=2.5,
+    interpolate='monotone'
+).encode(
+    x=alt.X('Hora:Q', title=None, scale=alt.Scale(domain=[0, 23])),
+    y=alt.Y(
+        'Medición (dB):Q',
+        title='dB Promedio',
+        scale=alt.Scale(zero=False, domain=[60, 78])
+    )
+)
+```
+
+### Puntos
+
+```{python}
+# Puntos de la medicion horaria 
+puntos_detalle = alt.Chart(df_hora_promedio).mark_circle(size=50).encode(
+    x='Hora:Q',
+    y='Medición (dB):Q',
+    tooltip=[
+        alt.Tooltip('Hora:Q', title='Hora'),
+        alt.Tooltip('Medición (dB):Q', title='dB promedio')
+    ],
+    color=alt.Color(
+        'Medición (dB):Q',
+        scale=alt.Scale(scheme='magma'),
+        legend=None
+    )
+)
+```
+
+
+### Gráfico combinado
+
+```{python}
+# Union de graficos
+grafico_linea = (fondo_sombras + linea_tendencia + puntos_detalle).properties(
+    width=575,
+    height=200,
+    title=alt.TitleParams("Ritmo y Densidad Acústica", fontSize=16)
+)
+```
+
+
+### Mapa de calor
+
+```{python}
+# Transformamos las fechas a su typo correspondiente
+df_final['Fecha'] = pd.to_datetime(df_final['Fecha'], errors='coerce')
+df_final['Fecha_Etiqueta'] = df_final['Fecha'].dt.strftime('%d-%m')
+
+# Creamos el mapa de calor
+mapa_calor = alt.Chart(df_final).mark_rect().encode(
+    x=alt.X('Hora:O', title='Hora (0-23)', axis=alt.Axis(labelAngle=0)),
+    y=alt.Y('Fecha_Etiqueta:O', title='Día/Mes'),
+    color=alt.Color('Medición (dB):Q', title='dB', scale=alt.Scale(scheme='magma')),
+    tooltip=['Fecha_Etiqueta', 'Hora', 'Medición (dB)']
+).properties(
+    width=575,
+    height=280
+)
+```
+
+### Dashbord final
+
+```{python}
+# Cnfiguramos label y title 
+dashboard_final = (grafico_linea & mapa_calor).configure_axis(
+    labelFontSize=9,
+    titleFontSize=11
+)
+
+dashboard_final
+```
+
+## * **¿Hay una diferencia significativa en los decibeles según el estado del cielo (soleado, lluvia, niebla)?**
+
+### Base del gráfico
+
+```{python}
+base = alt.Chart(df_final).encode(
+    y=alt.Y('Clima:N', title=None, sort='-x'),
+    x=alt.X(
+        'Medición (dB):Q',
+        title='Nivel de Ruido (dB)',
+        scale=alt.Scale(zero=False)
+    )
+)
+```
+
+### Puntos (todos los datos)
+
+```{python}
+puntos_fondo = base.mark_tick(opacity=0.3, size=15).encode(
+    color=alt.condition(
+        'datum["Medición (dB)"] > 70',
+        alt.value('#e74c3c'),
+        alt.value('#b2babb')
+    )
+)
+```
+
+### Promedio por clima
+
+```{python}
+barras_promedio = base.mark_tick(
+    color='#1a1a1a',
+    thickness=4,
+    size=35
+).encode(
+    x='mean(Medición (dB)):Q',
+    tooltip=[
+        alt.Tooltip('Clima:N'),
+        alt.Tooltip(
+            'mean(Medición (dB)):Q',
+            title='Ruido Promedio (dB)',
+            format='.1f'
+        )
+    ]
+)
+```
+
+### Línea de umbral
+
+```{python}
+linea_umbral = alt.Chart(
+    pd.DataFrame({'Umbral': [70]})
+).mark_rule(
+    color='#e74c3c',
+    strokeDash=[5, 5],
+    strokeWidth=2,
+    opacity=0.6
+).encode(
+    x='Umbral:Q'
+)
+```
+
+
+### combinado
+
+```{python}
+grafico_clima_impacto = (
+    puntos_fondo + barras_promedio + linea_umbral
+).properties(
+    width=800,
+    height=500,
+    title=alt.TitleParams(
+        "Impacto del Clima en la Contaminación Acústica",
+        subtitle="La línea roja marca el umbral de 70 dB"
+    )
+)
+```
+
+###  Estilo final
+
+```{python}
+grafico_clima_impacto = grafico_clima_impacto.configure_axisX(
+    gridOpacity=0.4,
+    gridDash=[2, 2]
+).configure_axisY(
+    labelColor='#1a1a1a',
+    labelFontSize=11,
+    labelFontWeight='bold'
+).configure_view(
+    stroke=None
+)
+grafico_clima_impacto 
+```
+
+## * **¿Cuáles son las "horas pico" de ruido y existe un ciclo diario predecible?** 
+
+### Mapa de Calor
+```{python}
+# Asegurar formato de fecha
+df_final['Fecha'] = pd.to_datetime(df_final['Fecha'])
+
+# Mapa de calor semanal de ruido
+heatmap_semanal = alt.Chart(df_final).mark_rect().encode(
+    x=alt.X('Hora:O', title='Hora del Día', axis=alt.Axis(labelAngle=0)),
+    y=alt.Y(
+        'day(Fecha):O',
+        title='Día de la Semana',
+        sort=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+    ),
+    color=alt.Color(
+        'mean(Medición (dB)):Q',
+        title='Ruido Promedio (dB)',
+        scale=alt.Scale(scheme='magma', domain=[60, 75])
+    ),
+    tooltip=[
+        alt.Tooltip('day(Fecha):N', title='Día'),
+        alt.Tooltip('Hora:O', title='Hora'),
+        alt.Tooltip('mean(Medición (dB)):Q', format='.1f', title='Promedio dB'),
+        alt.Tooltip('count():Q', title='Muestras')
+    ]
+).properties(
+    width=800,
+    height=200,
+    title="Patrón Semanal de Contaminación Acústica"
+)
+```
+
+```{python}
+# Área con gradiente
+area_elegante = alt.Chart(df_final).mark_area(
+    line={'color':'#2c3e50'},
+    color=alt.Gradient(
+        gradient='linear',
+        stops=[
+            alt.GradientStop(color='#3498db', offset=0),
+            alt.GradientStop(color='#e74c3c', offset=1)
+        ],
+        x1=1, x2=1, y1=1, y2=0
+    ),
+    interpolate='monotone',
+    opacity=0.6
+).encode(
+    x=alt.X('Hora:O', title='Hora del Día', axis=alt.Axis(labelAngle=0, grid=False)),
+    y=alt.Y('mean(Medición (dB)):Q', title='Ruido Promedio (dB)', scale=alt.Scale(domain=[60, 75])),
+    tooltip=['Hora:O', alt.Tooltip('mean(Medición (dB)):Q', format='.1f')]
+)
+
+# Puntos
+puntos = area_elegante.mark_point(color='#2c3e50', size=40)
+
+# Línea de umbral
+linea_salud = alt.Chart(pd.DataFrame({'y': [70]})).mark_rule(
+    color='#c0392b',
+    strokeDash=[4, 4]
+).encode(y='y:Q')
+
+# Gráfico final
+grafica_pro = area_elegante + puntos + linea_salud
+```
+
+```{python}
+# Unión vertical de gráficos
+grafica_1 = grafica_pro & heatmap_semanal
+```
+
+```{python}
+# Unión verti
+grafica_1.configure_axis(
+    labelFontSize=11,
+    titleFontSize=12,
+    labelColor='#7f8c8d',
+    titleColor='#2c3e50',
+    grid=False
+).configure_view(
+    stroke=None
+)
+```
+
+
+## * **¿Existe una correlación directa entre la temperatura y el ruido registrado?** 
+
+### Visualización de la Densidad de Eventos: Relación entre Temperatura Ambiente y Contaminación Sonora
+
+```{python}
+# 1. El cuerpo central: Mapa de densidad (Heatmap) con Tooltip
+main = alt.Chart(df_final).mark_rect().encode(
+    x=alt.X('Temperatura (°C):Q', bin=alt.Bin(maxbins=30), title='Temperatura (°C)'),
+    y=alt.Y('Medición (dB):Q', bin=alt.Bin(maxbins=30), title='Ruido (dB)'),
+    color=alt.Color('count():Q', scale=alt.Scale(scheme='viridis'), title='Densidad'),
+    tooltip=[
+        alt.Tooltip('count():Q', title='Registros en este bloque'),
+        alt.Tooltip('mean(Medición (dB)):Q', format='.1f', title='Ruido Promedio'),
+        alt.Tooltip('mean(Temperatura (°C)):Q', format='.1f', title='Temp Promedio')
+    ]
+).properties(width=600, height=400)
+
+# 2. Histograma Superior con Tooltip (Valores de Temperatura)
+top = alt.Chart(df_final).mark_bar(color='#440154').encode(
+    x=alt.X('Temperatura (°C):Q', bin=alt.Bin(maxbins=30), axis=None),
+    y=alt.Y('count():Q', title=None, axis=None),
+    # Añadimos tooltip aquí
+    tooltip=[
+        alt.Tooltip('count():Q', title='Total de registros'),
+        alt.Tooltip('Temperatura (°C):Q', bin=alt.Bin(maxbins=30), title='Rango de Temp')
+    ]
+).properties(width=600, height=60)
+
+# 3. Histograma Lateral con Tooltip (Valores de Ruido)
+right = alt.Chart(df_final).mark_bar(color='#fde725').encode(
+    y=alt.Y('Medición (dB):Q', bin=alt.Bin(maxbins=30), axis=None),
+    x=alt.X('count():Q', title=None, axis=None),
+    # Añadimos tooltip aquí
+    tooltip=[
+        alt.Tooltip('count():Q', title='Total de registros'),
+        alt.Tooltip('Medición (dB):Q', bin=alt.Bin(maxbins=30), title='Rango de Ruido')
+    ]
+).properties(width=80, height=400)
+
+# 4. Ensamble Final
+correlacion_grafica = alt.vconcat(
+    top,
+    alt.hconcat(main, right),
+    spacing=5
+).configure_view(
+    stroke=None
+).properties(
+    title={
+        "text": "Análisis de Correlación Interactivo",
+        "anchor": "start",
+        "fontSize": 20
+    }
+)
+
+correlacion_grafica
+```
+
+## * **¿De qué manera afectan las lluvias intensas a los niveles acústicos de la zona?**  
+
+### Segmentación de Precipitaciones
+
+```{python}
+def cat_precip(p):
+    if p == 0:      return 'Sin lluvia'
+    elif p < 0.5:   return 'Ligera'
+    elif p < 1.0:   return 'Moderada'
+    else:           return 'Fuerte'
+
+df_final = df_final.copy()  # evita el SettingWithCopyWarning
+df_final['lluvia_cat'] = df_final['Precipitaciones (mm)'].apply(cat_precip)
+
+# Verificar
+print(df_final['lluvia_cat'].value_counts())
+print("Nulls:", df_final['lluvia_cat'].isna().sum())
+```
+
+### Grafico de Boxplot
+
+```{python}
+orden_lluvia = ['Sin lluvia', 'Ligera', 'Moderada', 'Fuerte']
+
+boxplot = alt.Chart(df_final).mark_boxplot(
+    size=50,
+    extent='min-max'
+).encode(
+    x=alt.X('lluvia_cat:N', title='Intensidad de Lluvia', sort=orden_lluvia),
+    y=alt.Y('Medición (dB):Q', title='Nivel de ruido (dB)',
+            scale=alt.Scale(zero=False, domain=[50, 90])),
+    color=alt.Color('lluvia_cat:N', legend=None,
+                    scale=alt.Scale(scheme='set2')),
+    tooltip=[
+        alt.Tooltip('lluvia_cat:N', title='Tipo de lluvia'),
+        alt.Tooltip('Medición (dB):Q', title='dB', format='.2f')
+    ]
+)
+
+umbral = alt.Chart(pd.DataFrame({'y': [70]})).mark_rule(
+    color='red', strokeDash=[5, 5], strokeWidth=2
+).encode(y='y:Q')
+
+grafico_final = (boxplot + umbral).properties(
+    width=600,
+    height=450,
+    title="3. Factor Lluvia: Distribución por Intensidad"
+).configure_view(
+    stroke=None
+).configure_axis(
+    gridColor='#e0e0e0',
+    labelFontSize=12,
+    titleFontSize=14
+)
+
+grafico_final
+```

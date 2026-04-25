@@ -1,0 +1,132 @@
+---
+title: "Análisis de Ruido Urbano"
+format: html
+jupyter: python3
+---
+
+## Importación de librerías
+
+```{python}
+import pandas as pd
+import altair as alt
+```
+
+## Configuración de Altair
+
+```{python}
+# Desactivar el límite máximo de filas de Altair 
+alt.data_transformers.disable_max_rows()
+```
+
+## Cargar de datos
+
+```{python}
+# Cargar los datos
+df_ruido = pd.read_csv('Ruido_con_NaN.csv')
+df_clima = pd.read_csv('Clima - Hoja 1.csv')
+```
+
+## Base de datos
+
+```{python}
+# Visualizacón de la base de datos de rudio
+df_ruido.head() 
+```
+
+```{python}
+# Visualizacón de la base de datos del clima
+df_clima.head() 
+```
+
+## Informacion de los datos de ruido
+
+```{python}
+# Informacion de los datos
+df_ruido.info()
+```
+
+## Informacion de los datos climáticos
+
+```{python}
+# Información los datos
+df_clima.info()
+```
+
+
+## Preparación de datos (Ruido)
+
+```{python}
+# Preparar el dataset de Ruido
+df_ruido['Fecha'] = pd.to_datetime(df_ruido['Fecha'])
+```
+
+## Preparación de datos (Clima)
+
+```{python}
+# Preparar el dataset de Clima
+# Procedemos a darle el typo correspondiente y a cambiar las comas por puntos
+df_clima['Temperatura (°C)'] = pd.to_numeric(
+    df_clima['Temperatura (°C)'].astype(str).str.replace(',', '.'),
+    errors='coerce'
+)
+
+df_clima['Precipitaciones (mm)'] = pd.to_numeric(
+    df_clima['Precipitaciones (mm)'].astype(str).str.replace(',', '.'),
+    errors='coerce'
+)
+
+df_clima['Fecha'] = pd.to_datetime(df_clima['Fecha'], errors='coerce')
+
+df_clima['Hora'] = pd.to_datetime(df_clima['Hora'], errors='coerce').dt.hour
+```
+
+## Unión de datasets
+
+```{python}
+# Unión de ambos datasets
+df_final = pd.merge(df_ruido, df_clima, on=['Fecha', 'Hora'], how='left')
+```
+
+## Conteo de valores NaN
+
+```{python}
+# Conteo de valores NaN
+nulos_antes = df_final['Medición (dB)'].isna().sum()
+
+print(f"Total de registros: {len(df_final)}")
+print(f"Cantidad de valores NaN (horas sin datos de ruido): {nulos_antes}")
+```
+
+## Promedio global de ruido
+
+```{python}
+# Calcular el promedio global de ruido para rellenar los valores faltantes
+media_ruido = df_final['Medición (dB)'].mean()
+
+print(f"El promedio global de ruido del mes es: {media_ruido:.2f} dB")
+```
+
+## Imputación de valores faltantes
+
+```{python}
+# Rellenar los valores NaN con esta media
+df_final['Medición (dB)'] = df_final['Medición (dB)'].fillna(media_ruido)
+```
+
+## Verificación de imputación
+
+```{python}
+# Comprobar que no hay nan
+nulos_despues = df_final['Medición (dB)'].isna().sum()
+
+print(f"Cantidad de valores NaN después de la imputación: {nulos_despues}")
+```
+
+## Vista previa del dataset final
+
+```{python}
+# Mostrar las primeras filas para verificar
+df_final.head()
+```
+
+

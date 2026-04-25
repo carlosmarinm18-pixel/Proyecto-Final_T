@@ -1,0 +1,745 @@
+Fecha,Hora,Medición (dB),Temperatura (°C),Clima,Precipitaciones (mm)
+2026-03-01,0,69.005443438581,12.7,Lluvia moderada a intervalos,0.0
+2026-03-01,1,70.24,12.4,Lluvia moderada a intervalos,0.0
+2026-03-01,2,73.22500000000001,12.3,Lluvia moderada a intervalos,0.0
+2026-03-01,3,75.10333333333334,12.2,Lluvia moderada a intervalos,0.0
+2026-03-01,4,73.07333333333334,11.9,Neblina,0.0
+2026-03-01,5,72.07833333333333,8.4,Neblina,0.0
+2026-03-01,6,70.1825,5.1,Neblina,0.0
+2026-03-01,7,69.005443438581,9.7,Neblina,0.0
+2026-03-01,8,69.858,12.7,Neblina,0.0
+2026-03-01,9,71.864,14.4,Neblina,0.0
+2026-03-01,10,68.37,16.4,Neblina,0.0
+2026-03-01,11,68.41666666666667,18.6,Neblina,0.0
+2026-03-01,12,69.28999999999999,19.6,Parcialmente nublado,0.1
+2026-03-01,13,69.285,19.0,Parcialmente nublado,0.2
+2026-03-01,14,70.114,18.0,Nublado,0.4
+2026-03-01,15,68.93571428571428,17.4,Nublado,0.6
+2026-03-01,16,67.72666666666667,17.1,Lluvia moderada a intervalos,1.0
+2026-03-01,17,69.87,16.5,Lluvia moderada a intervalos,0.7
+2026-03-01,18,69.43833333333333,14.9,Lluvia moderada a intervalos,1.0
+2026-03-01,19,69.005443438581,11.8,Lluvia moderada a intervalos,0.1
+2026-03-01,20,69.03,12.0,Lluvia moderada a intervalos,0.5
+2026-03-01,21,69.005443438581,12.3,Lluvia moderada a intervalos,0.1
+2026-03-01,22,69.005443438581,13.2,Lluvia moderada a intervalos,0.1
+2026-03-01,23,69.005443438581,13.1,Lluvia moderada a intervalos,0.0
+2026-03-02,0,69.005443438581,13.2,Neblina,0.0
+2026-03-02,1,69.005443438581,13.0,Neblina,0.0
+2026-03-02,2,57.125,12.8,Neblina,0.0
+2026-03-02,3,55.14,12.5,Neblina,0.0
+2026-03-02,4,58.71833333333333,12.4,Neblina,0.0
+2026-03-02,5,65.19,12.4,Neblina,0.0
+2026-03-02,6,71.476,11.2,Neblina,0.0
+2026-03-02,7,72.67666666666666,12.1,Neblina,0.0
+2026-03-02,8,71.7775,13.2,Lluvia moderada a intervalos,0.1
+2026-03-02,9,71.1,14.5,Lluvia moderada a intervalos,0.1
+2026-03-02,10,70.146,16.3,Lluvia moderada a intervalos,0.1
+2026-03-02,11,70.3,18.4,Lluvia moderada a intervalos,0.1
+2026-03-02,12,70.34333333333333,19.8,Lluvia moderada a intervalos,0.2
+2026-03-02,13,70.208,20.4,Lluvia moderada a intervalos,0.3
+2026-03-02,14,71.06833333333333,19.9,Lluvia moderada a intervalos,0.4
+2026-03-02,15,70.23,18.9,Lluvia moderada a intervalos,0.3
+2026-03-02,16,70.0075,17.5,Lluvia moderada a intervalos,0.1
+2026-03-02,17,69.95333333333333,16.7,Lluvia moderada a intervalos,0.1
+2026-03-02,18,69.505,15.9,Lluvia moderada a intervalos,0.2
+2026-03-02,19,69.005443438581,12.5,Lluvia moderada a intervalos,0.1
+2026-03-02,20,67.25,12.5,Lluvia moderada a intervalos,0.0
+2026-03-02,21,67.8,13.8,Lluvia moderada a intervalos,0.0
+2026-03-02,22,67.87666666666667,13.6,Lluvia moderada a intervalos,0.0
+2026-03-02,23,65.702,13.4,Parcialmente nublado,0.0
+2026-03-03,0,64.44833333333334,9.6,Neblina,0.0
+2026-03-03,1,58.56833333333333,11.2,Neblina,0.0
+2026-03-03,2,56.86000000000001,12.2,Lluvia moderada a intervalos,0.0
+2026-03-03,3,55.45399999999999,12.1,Lluvia moderada a intervalos,0.0
+2026-03-03,4,59.656666666666666,12.4,Parcialmente nublado,0.0
+2026-03-03,5,65.824,12.2,Parcialmente nublado,0.0
+2026-03-03,6,71.59333333333333,12.2,Parcialmente nublado,0.0
+2026-03-03,7,72.185,12.5,Parcialmente nublado,0.0
+2026-03-03,8,71.896,14.0,Despejado,0.0
+2026-03-03,9,69.005443438581,15.6,Parcialmente nublado,0.0
+2026-03-03,10,69.005443438581,17.0,Parcialmente nublado,0.0
+2026-03-03,11,69.12,18.4,Lluvia moderada a intervalos,0.0
+2026-03-03,12,70.51,20.0,Lluvia moderada a intervalos,0.1
+2026-03-03,13,70.6025,20.7,Lluvia moderada a intervalos,0.2
+2026-03-03,14,70.66333333333334,20.9,Lluvia moderada a intervalos,0.1
+2026-03-03,15,70.17999999999999,20.0,Lluvia moderada a intervalos,0.4
+2026-03-03,16,68.55,18.6,Lluvia moderada a intervalos,0.7
+2026-03-03,17,69.79833333333333,17.0,Lluvia moderada a intervalos,0.6
+2026-03-03,18,70.466,15.2,Periodos de lluvia moderada,0.5
+2026-03-03,19,71.46833333333333,13.0,Lluvia moderada a intervalos,0.3
+2026-03-03,20,69.005443438581,13.1,Lluvia moderada a intervalos,0.1
+2026-03-03,21,74.22999999999999,13.7,Lluvia moderada a intervalos,0.1
+2026-03-03,22,66.79249999999999,13.7,Lluvia moderada a intervalos,0.1
+2026-03-03,23,69.005443438581,13.5,Lluvia moderada a intervalos,0.0
+2026-03-04,0,69.005443438581,13.3,Lluvia moderada a intervalos,0.1
+2026-03-04,1,63.312,13.1,Lluvia moderada a intervalos,0.1
+2026-03-04,2,71.42333333333333,9.0,Lluvia moderada a intervalos,0.0
+2026-03-04,3,55.50666666666667,8.5,Lluvia moderada a intervalos,0.0
+2026-03-04,4,62.30833333333334,8.2,Lluvia moderada a intervalos,0.0
+2026-03-04,5,65.71000000000001,8.4,Neblina,0.0
+2026-03-04,6,69.005443438581,8.3,Neblina,0.0
+2026-03-04,7,74.16,11.9,Lluvia moderada a intervalos,0.0
+2026-03-04,8,71.62,13.2,Lluvia moderada a intervalos,0.0
+2026-03-04,9,70.96,14.8,Lluvia moderada a intervalos,0.1
+2026-03-04,10,71.36,16.6,Lluvia moderada a intervalos,0.2
+2026-03-04,11,69.005443438581,17.9,Lluvia moderada a intervalos,0.6
+2026-03-04,12,70.36666666666667,18.3,Lluvia moderada a intervalos,0.9
+2026-03-04,13,71.282,17.2,Lluvia moderada a intervalos,1.0
+2026-03-04,14,69.91166666666668,16.6,Lluvia moderada a intervalos,0.8
+2026-03-04,15,69.97166666666666,17.0,Intervalos de lluvias ligeras con tormenta en la región,1.1
+2026-03-04,16,69.005443438581,16.6,Intervalos de lluvias ligeras con tormenta en la región,1.2
+2026-03-04,17,69.005443438581,15.8,Intervalos de lluvias ligeras con tormenta en la región,0.7
+2026-03-04,18,69.005443438581,14.9,Intervalos de lluvias ligeras con tormenta en la región,0.7
+2026-03-04,19,69.005443438581,13.8,Intervalos de lluvias ligeras con tormenta en la región,0.4
+2026-03-04,20,67.31,11.0,Lluvia moderada a intervalos,0.0
+2026-03-04,21,67.27,11.5,Lluvia moderada a intervalos,0.1
+2026-03-04,22,69.005443438581,13.1,Neblina,0.1
+2026-03-04,23,65.67,13.1,Lluvia moderada a intervalos,0.0
+2026-03-05,0,64.792,12.7,Lluvia moderada a intervalos,0.1
+2026-03-05,1,66.96000000000001,12.9,Lluvia moderada a intervalos,0.2
+2026-03-05,2,62.940000000000005,12.8,Ligeras precipitaciones,0.2
+2026-03-05,3,60.66333333333333,12.8,Ligeras precipitaciones,0.0
+2026-03-05,4,61.022000000000006,12.6,Ligeras precipitaciones,0.0
+2026-03-05,5,65.03166666666667,12.6,Neblina,0.0
+2026-03-05,6,69.56,12.1,Neblina,0.1
+2026-03-05,7,73.44,12.7,Neblina,0.1
+2026-03-05,8,71.785,13.3,Neblina,0.1
+2026-03-05,9,71.082,14.3,Lluvia moderada a intervalos,0.2
+2026-03-05,10,70.53,15.7,Lluvia moderada a intervalos,0.4
+2026-03-05,11,72.55666666666667,17.0,Lluvia moderada a intervalos,0.6
+2026-03-05,12,70.47500000000001,17.8,Lluvia moderada a intervalos,0.8
+2026-03-05,13,72.662,17.1,Lluvia moderada a intervalos,0.6
+2026-03-05,14,71.08333333333333,16.3,Lluvia moderada a intervalos,0.6
+2026-03-05,15,70.34166666666667,16.3,Lluvia moderada a intervalos,0.6
+2026-03-05,16,69.485,16.0,Lluvia moderada a intervalos,0.8
+2026-03-05,17,69.005443438581,15.6,Lluvia moderada a intervalos,0.6
+2026-03-05,18,69.62666666666667,14.6,Lluvia moderada a intervalos,0.6
+2026-03-05,19,69.78166666666668,13.9,Lluvia moderada a intervalos,0.2
+2026-03-05,20,67.69428571428571,13.7,Lluvia moderada a intervalos,0.1
+2026-03-05,21,69.328,13.5,Lluvia moderada a intervalos,0.1
+2026-03-05,22,68.735,13.4,Lluvia moderada a intervalos,0.2
+2026-03-05,23,69.06666666666666,13.2,Neblina,0.0
+2026-03-06,0,68.394,11.2,Ligeras precipitaciones,0.2
+2026-03-06,1,69.68166666666667,12.3,Ligeras precipitaciones,0.2
+2026-03-06,2,72.77833333333334,12.9,Ligeras precipitaciones,0.3
+2026-03-06,3,65.904,12.8,Ligeras precipitaciones,0.1
+2026-03-06,4,63.53333333333333,12.1,Ligeras precipitaciones,0.2
+2026-03-06,5,65.18,11.9,Neblina,0.2
+2026-03-06,6,71.76,12.2,Neblina,0.1
+2026-03-06,7,72.958,12.4,Ligeras precipitaciones,0.0
+2026-03-06,8,69.005443438581,13.0,Ligeras precipitaciones,0.1
+2026-03-06,9,70.53,14.8,Ligeras precipitaciones,0.2
+2026-03-06,10,69.005443438581,16.2,Neblina,0.4
+2026-03-06,11,69.005443438581,17.4,Neblina,0.8
+2026-03-06,12,69.71666666666667,18.0,Lluvia moderada a intervalos,0.9
+2026-03-06,13,69.964,17.7,Llovizna a intervalos,0.6
+2026-03-06,14,70.67999999999999,16.9,Lluvia moderada a intervalos,0.5
+2026-03-06,15,70.16166666666666,16.2,Lluvia moderada a intervalos,0.3
+2026-03-06,16,69.8,16.0,Lluvia moderada a intervalos,0.5
+2026-03-06,17,69.62,15.6,Lluvia moderada a intervalos,1.1
+2026-03-06,18,70.16,14.5,Ligeras precipitaciones,0.8
+2026-03-06,19,69.322,9.9,Lluvia moderada a intervalos,0.3
+2026-03-06,20,69.97,11.4,Lluvia moderada a intervalos,0.2
+2026-03-06,21,75.825,13.2,Ligeras precipitaciones,0.2
+2026-03-06,22,69.005443438581,13.2,Ligeras precipitaciones,0.1
+2026-03-06,23,69.51599999999999,13.2,Neblina,0.1
+2026-03-07,0,69.1,12.9,Neblina,0.1
+2026-03-07,1,73.4675,12.8,Neblina,0.0
+2026-03-07,2,77.33428571428571,12.7,Llovizna a intervalos,0.3
+2026-03-07,3,77.25,12.5,Llovizna a intervalos,0.2
+2026-03-07,4,74.45,12.4,Ligeras precipitaciones,0.1
+2026-03-07,5,70.72500000000001,12.3,Ligeras precipitaciones,0.0
+2026-03-07,6,71.65833333333335,11.6,Neblina,0.0
+2026-03-07,7,71.904,12.1,Neblina,0.0
+2026-03-07,8,70.72200000000001,13.3,Neblina,0.0
+2026-03-07,9,69.005443438581,14.5,Lluvia moderada a intervalos,0.2
+2026-03-07,10,69.61,16.0,Lluvia moderada a intervalos,0.3
+2026-03-07,11,70.306,17.2,Lluvia moderada a intervalos,0.5
+2026-03-07,12,69.9975,18.1,Lluvia moderada a intervalos,0.7
+2026-03-07,13,70.102,17.2,Lluvia moderada a intervalos,0.8
+2026-03-07,14,69.126,16.1,Lluvia moderada a intervalos,0.8
+2026-03-07,15,68.95599999999999,15.7,Lluvia moderada a intervalos,0.7
+2026-03-07,16,69.08,15.8,Lluvia moderada a intervalos,0.8
+2026-03-07,17,68.86166666666666,15.2,Lluvia moderada a intervalos,1.5
+2026-03-07,18,68.88333333333334,14.4,Ligeras precipitaciones,1.0
+2026-03-07,19,68.89999999999999,12.3,Lluvia moderada a intervalos,0.3
+2026-03-07,20,69.11666666666666,11.4,Lluvia moderada a intervalos,0.3
+2026-03-07,21,71.424,11.9,Lluvia moderada a intervalos,0.4
+2026-03-07,22,72.995,12.5,Llovizna a intervalos,0.2
+2026-03-07,23,71.93833333333333,11.2,Neblina,0.1
+2026-03-08,0,71.29,10.0,Lluvia moderada a intervalos,0.0
+2026-03-08,1,71.465,8.6,Lluvia moderada a intervalos,0.0
+2026-03-08,2,72.92,10.0,Lluvia moderada a intervalos,0.0
+2026-03-08,3,73.58333333333333,11.4,Lluvia moderada a intervalos,0.0
+2026-03-08,4,69.91333333333333,11.9,Lluvia moderada a intervalos,0.0
+2026-03-08,5,69.005443438581,11.8,Lluvia moderada a intervalos,0.0
+2026-03-08,6,69.005443438581,11.4,Neblina,0.1
+2026-03-08,7,69.005443438581,12.2,Neblina,0.1
+2026-03-08,8,69.005443438581,13.2,Lluvia moderada a intervalos,0.1
+2026-03-08,9,69.005443438581,14.7,Lluvia moderada a intervalos,0.3
+2026-03-08,10,70.2,15.7,Lluvia moderada a intervalos,0.6
+2026-03-08,11,68.34333333333333,16.5,Lluvia moderada a intervalos,0.7
+2026-03-08,12,69.43333333333334,16.7,Neblina,0.8
+2026-03-08,13,69.564,16.9,Lluvia moderada a intervalos,1.0
+2026-03-08,14,68.07,17.0,Lluvia moderada a intervalos,0.9
+2026-03-08,15,69.005443438581,17.0,Llovizna a intervalos,1.2
+2026-03-08,16,69.005443438581,16.3,Lluvia moderada a intervalos,1.3
+2026-03-08,17,67.65,15.9,Lluvia moderada a intervalos,0.4
+2026-03-08,18,68.20599999999999,14.9,Lluvia moderada a intervalos,0.8
+2026-03-08,19,68.12,10.4,Lluvia moderada a intervalos,0.2
+2026-03-08,20,68.1,9.4,Neblina,0.0
+2026-03-08,21,68.80166666666666,10.3,Ligeras precipitaciones,0.1
+2026-03-08,22,69.2825,10.7,Neblina,0.2
+2026-03-08,23,69.738,11.1,Neblina,0.0
+2026-03-09,0,65.96666666666667,11.7,Lluvia moderada a intervalos,0.0
+2026-03-09,1,65.28166666666667,11.1,Lluvia moderada a intervalos,0.0
+2026-03-09,2,62.968,10.8,Lluvia moderada a intervalos,0.0
+2026-03-09,3,59.54666666666666,10.6,Lluvia moderada a intervalos,0.0
+2026-03-09,4,61.24333333333333,10.4,Lluvia moderada a intervalos,0.0
+2026-03-09,5,65.238,9.1,Lluvia moderada a intervalos,0.0
+2026-03-09,6,72.105,7.0,Lluvia moderada a intervalos,0.0
+2026-03-09,7,72.36166666666666,9.2,Lluvia moderada a intervalos,0.0
+2026-03-09,8,72.588,13.7,Lluvia moderada a intervalos,0.1
+2026-03-09,9,70.82,15.3,Lluvia moderada a intervalos,0.0
+2026-03-09,10,71.07857142857144,16.9,Lluvia moderada a intervalos,0.2
+2026-03-09,11,70.87,18.2,Lluvia moderada a intervalos,0.5
+2026-03-09,12,71.19,19.1,Lluvia moderada a intervalos,0.6
+2026-03-09,13,70.835,19.0,Lluvia moderada a intervalos,0.7
+2026-03-09,14,71.425,17.9,Lluvia moderada a intervalos,0.9
+2026-03-09,15,69.66166666666668,16.7,Periodos de lluvia moderada,1.0
+2026-03-09,16,69.582,16.6,Periodos de lluvia moderada,1.4
+2026-03-09,17,69.88,15.8,Intervalos de lluvias ligeras con tormenta en la región,1.7
+2026-03-09,18,69.605,14.7,Intervalos de lluvias ligeras con tormenta en la región,1.3
+2026-03-09,19,68.9425,11.4,Intervalos de lluvias ligeras con tormenta en la región,0.9
+2026-03-09,20,67.06333333333333,9.8,Ligeras precipitaciones,0.2
+2026-03-09,21,65.89,8.4,Ligeras precipitaciones,0.1
+2026-03-09,22,65.51599999999999,8.6,Neblina,0.0
+2026-03-09,23,65.71499999999999,9.1,Neblina,0.0
+2026-03-10,0,62.99666666666667,8.9,Ligeras precipitaciones,0.2
+2026-03-10,1,61.444,8.4,Ligeras precipitaciones,0.2
+2026-03-10,2,58.49666666666667,8.9,Ligeras precipitaciones,0.1
+2026-03-10,3,56.84666666666666,8.8,Ligeras precipitaciones,0.1
+2026-03-10,4,59.774,8.6,Neblina,0.1
+2026-03-10,5,64.04,7.9,Neblina,0.1
+2026-03-10,6,72.53166666666667,8.3,Neblina,0.1
+2026-03-10,7,72.645,12.0,Neblina,0.1
+2026-03-10,8,72.76,13.1,Lluvia moderada a intervalos,0.1
+2026-03-10,9,70.9,13.9,Lluvia moderada a intervalos,0.1
+2026-03-10,10,70.342,15.0,Lluvia moderada a intervalos,0.4
+2026-03-10,11,70.28166666666667,16.5,Lluvia moderada a intervalos,0.4
+2026-03-10,12,70.18333333333332,17.9,Lluvia moderada a intervalos,0.9
+2026-03-10,13,71.17999999999999,17.9,Ligeras precipitaciones,1.2
+2026-03-10,14,69.9,16.5,Llovizna a intervalos,1.3
+2026-03-10,15,69.67,16.0,Intervalos de lluvias ligeras con tormenta en la región,1.6
+2026-03-10,16,69.705,15.6,Intervalos de lluvias ligeras con tormenta en la región,2.2
+2026-03-10,17,69.005443438581,15.0,Intervalos de lluvias ligeras con tormenta en la región,2.4
+2026-03-10,18,68.95,14.2,Ligeras precipitaciones,1.5
+2026-03-10,19,69.34666666666668,12.8,Ligeras precipitaciones,0.8
+2026-03-10,20,66.37333333333333,11.4,Intervalos de lluvias ligeras con tormenta en la región,0.5
+2026-03-10,21,66.98400000000001,11.6,Intervalos de lluvias ligeras con tormenta en la región,0.5
+2026-03-10,22,66.55666666666667,11.7,Lluvia moderada a intervalos,0.6
+2026-03-10,23,64.78500000000001,12.5,Ligeras precipitaciones,0.5
+2026-03-11,0,65.926,12.6,Ligeras precipitaciones,0.3
+2026-03-11,1,62.92,12.4,Ligeras precipitaciones,0.0
+2026-03-11,2,63.37,10.5,Neblina,0.1
+2026-03-11,3,69.005443438581,10.6,Neblina,0.0
+2026-03-11,4,64.0,10.1,Neblina,0.0
+2026-03-11,5,64.95333333333333,9.7,Neblina,0.0
+2026-03-11,6,71.82166666666667,9.3,Neblina,0.0
+2026-03-11,7,72.55,12.0,Neblina,0.0
+2026-03-11,8,71.13,12.8,Lluvia moderada a intervalos,0.1
+2026-03-11,9,70.52333333333333,13.3,Llovizna a intervalos,0.2
+2026-03-11,10,71.69,14.6,Lluvia moderada a intervalos,0.3
+2026-03-11,11,69.53999999999999,16.4,Lluvia moderada a intervalos,0.3
+2026-03-11,12,70.02499999999999,17.6,Lluvia moderada a intervalos,0.8
+2026-03-11,13,71.07333333333334,17.6,Lluvia moderada a intervalos,0.9
+2026-03-11,14,70.82,16.4,Lluvia moderada a intervalos,0.9
+2026-03-11,15,69.005443438581,16.1,Lluvia moderada a intervalos,0.7
+2026-03-11,16,71.41499999999999,16.0,Lluvia moderada a intervalos,1.0
+2026-03-11,17,70.18428571428572,15.4,Ligeras precipitaciones,1.1
+2026-03-11,18,70.77,14.2,Lluvia moderada a intervalos,0.6
+2026-03-11,19,68.52166666666666,13.2,Ligeras precipitaciones,0.8
+2026-03-11,20,68.53666666666668,12.8,Ligeras lluvias,0.8
+2026-03-11,21,67.19333333333333,12.6,Ligeras lluvias,0.8
+2026-03-11,22,67.19666666666666,12.2,Ligeras precipitaciones,0.5
+2026-03-11,23,66.436,11.9,Llovizna,0.4
+2026-03-12,0,67.5,11.5,Ligeras precipitaciones,0.2
+2026-03-12,1,63.278333333333336,10.1,Llovizna a intervalos,0.3
+2026-03-12,2,61.362,9.5,Llovizna a intervalos,0.3
+2026-03-12,3,59.778333333333336,9.7,Llovizna a intervalos,0.3
+2026-03-12,4,61.02166666666667,11.7,Ligeras precipitaciones,0.2
+2026-03-12,5,65.94200000000001,11.7,Neblina,0.1
+2026-03-12,6,73.06166666666667,11.6,Neblina,0.0
+2026-03-12,7,72.78,11.7,Neblina,0.1
+2026-03-12,8,72.33666666666666,12.2,Lluvia moderada a intervalos,0.0
+2026-03-12,9,71.09333333333333,13.0,Lluvia moderada a intervalos,0.1
+2026-03-12,10,71.00833333333334,13.7,Llovizna a intervalos,0.2
+2026-03-12,11,71.536,14.8,Lluvia moderada a intervalos,0.4
+2026-03-12,12,70.96857142857142,15.5,Lluvia moderada a intervalos,1.0
+2026-03-12,13,71.83,16.4,Lluvia moderada a intervalos,0.9
+2026-03-12,14,71.184,16.7,Lluvia moderada a intervalos,0.8
+2026-03-12,15,70.41833333333334,17.0,Lluvia moderada a intervalos,0.5
+2026-03-12,16,70.02,16.2,Lluvia moderada a intervalos,0.8
+2026-03-12,17,69.185,15.1,Lluvia moderada a intervalos,0.4
+2026-03-12,18,69.74833333333333,13.5,Ligeras precipitaciones,0.2
+2026-03-12,19,68.00500000000001,11.8,Lluvia moderada a intervalos,0.2
+2026-03-12,20,68.10333333333334,10.6,Lluvia moderada a intervalos,0.1
+2026-03-12,21,67.922,9.5,Lluvia moderada a intervalos,0.0
+2026-03-12,22,68.15166666666666,7.9,Lluvia moderada a intervalos,0.0
+2026-03-12,23,70.245,7.1,Lluvia moderada a intervalos,0.0
+2026-03-13,0,66.87333333333333,11.9,Neblina,0.0
+2026-03-13,1,68.544,11.3,Neblina,0.0
+2026-03-13,2,68.128,10.9,Neblina,0.0
+2026-03-13,3,65.70833333333333,8.8,Ligeras precipitaciones,0.2
+2026-03-13,4,64.25333333333333,8.7,Neblina,0.0
+2026-03-13,5,64.405,8.2,Neblina,0.0
+2026-03-13,6,69.005443438581,6.3,Neblina,0.0
+2026-03-13,7,69.005443438581,10.1,Neblina,0.0
+2026-03-13,8,71.608,13.2,Lluvia moderada a intervalos,0.0
+2026-03-13,9,69.005443438581,15.0,Lluvia moderada a intervalos,0.1
+2026-03-13,10,70.75800000000001,16.4,Parcialmente nublado,0.4
+2026-03-13,11,70.61571428571429,16.9,Lluvia moderada a intervalos,0.9
+2026-03-13,12,70.752,17.2,Lluvia moderada a intervalos,0.9
+2026-03-13,13,71.84333333333333,18.0,Lluvia moderada a intervalos,0.9
+2026-03-13,14,70.615,17.5,Lluvia moderada a intervalos,1.2
+2026-03-13,15,69.005443438581,16.6,Lluvia moderada a intervalos,0.7
+2026-03-13,16,69.63833333333334,16.4,Lluvia moderada a intervalos,0.3
+2026-03-13,17,69.98714285714286,15.6,Lluvia moderada a intervalos,0.4
+2026-03-13,18,70.196,14.2,Lluvia moderada a intervalos,0.3
+2026-03-13,19,69.35333333333334,10.6,Neblina,0.1
+2026-03-13,20,67.95,11.8,Neblina,0.0
+2026-03-13,21,76.38,11.9,Neblina,0.0
+2026-03-13,22,77.11500000000001,9.7,Lluvia moderada a intervalos,0.0
+2026-03-13,23,69.005443438581,9.4,Lluvia moderada a intervalos,0.0
+2026-03-14,0,71.10666666666667,6.8,Lluvia moderada a intervalos,0.0
+2026-03-14,1,72.76333333333334,6.6,Lluvia moderada a intervalos,0.0
+2026-03-14,2,73.192,5.0,Parcialmente nublado,0.0
+2026-03-14,3,73.69166666666666,4.2,Parcialmente nublado,0.0
+2026-03-14,4,72.04,3.8,Parcialmente nublado,0.0
+2026-03-14,5,66.454,3.5,Despejado,0.0
+2026-03-14,6,68.89,3.3,Despejado,0.0
+2026-03-14,7,70.80499999999999,5.6,Parcialmente nublado,0.0
+2026-03-14,8,70.926,12.8,Parcialmente nublado,0.0
+2026-03-14,9,70.85166666666667,14.9,Parcialmente nublado,0.0
+2026-03-14,10,70.91,17.0,Parcialmente nublado,0.1
+2026-03-14,11,69.005443438581,18.0,Parcialmente nublado,0.4
+2026-03-14,12,69.005443438581,19.1,Parcialmente nublado,0.8
+2026-03-14,13,73.7,18.6,Parcialmente nublado,1.1
+2026-03-14,14,69.54333333333334,18.1,Soleado,0.9
+2026-03-14,15,69.04166666666667,17.2,Lluvia moderada a intervalos,0.9
+2026-03-14,16,68.74600000000001,15.9,Lluvia moderada a intervalos,1.2
+2026-03-14,17,70.14666666666666,14.5,Lluvia moderada a intervalos,2.3
+2026-03-14,18,68.48,13.3,Intervalos de lluvias ligeras con tormenta en la región,2.0
+2026-03-14,19,69.785,12.7,Intervalos de lluvias ligeras con tormenta en la región,1.1
+2026-03-14,20,69.74600000000001,12.4,Lluvia moderada a intervalos,0.5
+2026-03-14,21,72.25,12.3,Ligeras precipitaciones,0.4
+2026-03-14,22,74.86600000000001,12.0,Llovizna a intervalos,0.2
+2026-03-14,23,74.00333333333333,10.6,Neblina,0.1
+2026-03-15,0,73.768,10.8,Neblina,0.1
+2026-03-15,1,73.56833333333333,9.1,Neblina,0.0
+2026-03-15,2,74.94,7.8,Neblina,0.0
+2026-03-15,3,76.13166666666667,5.5,Neblina,0.0
+2026-03-15,4,75.64166666666667,5.0,Neblina,0.0
+2026-03-15,5,71.934,4.9,Neblina,0.0
+2026-03-15,6,76.06666666666666,4.4,Neblina,0.0
+2026-03-15,7,71.16666666666667,8.2,Neblina,0.0
+2026-03-15,8,70.834,12.7,Parcialmente nublado,0.0
+2026-03-15,9,69.80666666666667,14.4,Parcialmente nublado,0.0
+2026-03-15,10,69.474,16.2,Parcialmente nublado,0.0
+2026-03-15,11,69.65833333333333,18.0,Parcialmente nublado,0.3
+2026-03-15,12,69.35666666666667,19.4,Lluvia moderada a intervalos,0.4
+2026-03-15,13,70.774,19.8,Lluvia moderada a intervalos,0.9
+2026-03-15,14,69.005443438581,18.8,Lluvia moderada a intervalos,0.8
+2026-03-15,15,68.71666666666667,16.3,Intervalos de lluvias ligeras con tormenta en la región,2.0
+2026-03-15,16,68.958,15.9,Ligeras precipitaciones,2.3
+2026-03-15,17,68.98285714285714,15.0,Lluvia moderada a intervalos,0.9
+2026-03-15,18,68.1975,13.0,Lluvia moderada a intervalos,0.2
+2026-03-15,19,66.47428571428573,8.0,Lluvia moderada a intervalos,0.0
+2026-03-15,20,67.53500000000001,6.9,Parcialmente nublado,0.0
+2026-03-15,21,66.64,6.5,Parcialmente nublado,0.0
+2026-03-15,22,68.28666666666668,5.7,Parcialmente nublado,0.0
+2026-03-15,23,66.82166666666667,5.0,Parcialmente nublado,0.0
+2026-03-16,0,66.23,4.4,Parcialmente nublado,0.0
+2026-03-16,1,63.5,4.1,Parcialmente nublado,0.0
+2026-03-16,2,58.856,3.8,Parcialmente nublado,0.0
+2026-03-16,3,57.626666666666665,3.6,Despejado,0.0
+2026-03-16,4,59.94199999999999,3.7,Despejado,0.0
+2026-03-16,5,69.005443438581,3.5,Despejado,0.0
+2026-03-16,6,69.005443438581,3.3,Despejado,0.0
+2026-03-16,7,69.005443438581,5.7,Despejado,0.0
+2026-03-16,8,69.005443438581,12.9,Soleado,0.0
+2026-03-16,9,73.66,15.0,Soleado,0.0
+2026-03-16,10,70.17,17.0,Soleado,0.0
+2026-03-16,11,70.25857142857143,18.7,Soleado,0.0
+2026-03-16,12,70.595,20.1,Lluvia moderada a intervalos,0.3
+2026-03-16,13,71.47,20.5,Lluvia moderada a intervalos,0.4
+2026-03-16,14,69.005443438581,18.9,Lluvia moderada a intervalos,0.7
+2026-03-16,15,69.005443438581,17.0,Intervalos de lluvias ligeras con tormenta en la región,0.6
+2026-03-16,16,69.005443438581,17.0,Lluvia moderada a intervalos,0.4
+2026-03-16,17,69.005443438581,16.6,Lluvia moderada a intervalos,0.4
+2026-03-16,18,71.53666666666666,13.7,Lluvia moderada a intervalos,0.2
+2026-03-16,19,68.2,6.0,Parcialmente nublado,0.0
+2026-03-16,20,69.455,5.5,Parcialmente nublado,0.0
+2026-03-16,21,65.288,5.3,Parcialmente nublado,0.0
+2026-03-16,22,66.93333333333334,5.2,Parcialmente nublado,0.0
+2026-03-16,23,64.99333333333334,4.8,Despejado,0.0
+2026-03-17,0,64.36833333333333,5.0,Parcialmente nublado,0.0
+2026-03-17,1,60.74,4.6,Parcialmente nublado,0.0
+2026-03-17,2,56.51499999999999,4.1,Parcialmente nublado,0.0
+2026-03-17,3,56.53833333333333,3.8,Parcialmente nublado,0.0
+2026-03-17,4,60.720000000000006,3.5,Parcialmente nublado,0.0
+2026-03-17,5,64.96499999999999,3.3,Parcialmente nublado,0.0
+2026-03-17,6,72.136,3.3,Despejado,0.0
+2026-03-17,7,69.005443438581,4.5,Despejado,0.0
+2026-03-17,8,72.19,12.5,Despejado,0.0
+2026-03-17,9,71.268,15.0,Soleado,0.0
+2026-03-17,10,69.005443438581,16.9,Soleado,0.0
+2026-03-17,11,69.005443438581,18.5,Soleado,0.0
+2026-03-17,12,70.04666666666667,20.1,Lluvia moderada a intervalos,0.0
+2026-03-17,13,70.4525,20.6,Lluvia moderada a intervalos,0.2
+2026-03-17,14,69.005443438581,19.4,Lluvia moderada a intervalos,0.2
+2026-03-17,15,69.57,18.0,Lluvia moderada a intervalos,0.3
+2026-03-17,16,71.25333333333333,17.9,Lluvia moderada a intervalos,0.4
+2026-03-17,17,72.86,16.7,Lluvia moderada a intervalos,0.1
+2026-03-17,18,69.29,13.0,Lluvia moderada a intervalos,0.1
+2026-03-17,19,70.508,5.5,Lluvia moderada a intervalos,0.1
+2026-03-17,20,68.39166666666667,4.8,Parcialmente nublado,0.0
+2026-03-17,21,66.532,4.3,Despejado,0.0
+2026-03-17,22,65.32166666666667,3.8,Despejado,0.0
+2026-03-17,23,66.74166666666666,3.6,Despejado,0.0
+2026-03-18,0,69.005443438581,4.1,Despejado,0.0
+2026-03-18,1,69.005443438581,4.1,Despejado,0.0
+2026-03-18,2,69.005443438581,3.9,Despejado,0.0
+2026-03-18,3,69.005443438581,3.8,Despejado,0.0
+2026-03-18,4,69.005443438581,3.4,Despejado,0.0
+2026-03-18,5,69.005443438581,3.4,Despejado,0.0
+2026-03-18,6,72.702,3.3,Despejado,0.0
+2026-03-18,7,72.90333333333332,5.3,Despejado,0.0
+2026-03-18,8,72.314,12.9,Soleado,0.0
+2026-03-18,9,71.04333333333334,15.7,Soleado,0.0
+2026-03-18,10,71.25999999999999,17.8,Soleado,0.0
+2026-03-18,11,70.82000000000001,19.6,Soleado,0.2
+2026-03-18,12,70.95,20.3,Lluvia moderada a intervalos,0.2
+2026-03-18,13,70.43,19.8,Lluvia moderada a intervalos,0.3
+2026-03-18,14,71.38199999999999,18.0,Lluvia moderada a intervalos,0.4
+2026-03-18,15,69.55666666666666,16.5,Llovizna a intervalos,0.3
+2026-03-18,16,69.98833333333333,16.8,Ligeras precipitaciones,0.1
+2026-03-18,17,70.184,17.0,Intervalos de lluvias ligeras con tormenta en la región,0.1
+2026-03-18,18,71.115,13.7,Lluvia moderada a intervalos,0.2
+2026-03-18,19,68.74,5.8,Lluvia moderada a intervalos,0.0
+2026-03-18,20,67.038,5.2,Despejado,0.0
+2026-03-18,21,67.01333333333334,4.9,Parcialmente nublado,0.0
+2026-03-18,22,67.13,4.8,Despejado,0.0
+2026-03-18,23,66.08,4.5,Despejado,0.0
+2026-03-19,0,66.73333333333333,4.4,Despejado,0.0
+2026-03-19,1,62.17,4.1,Despejado,0.0
+2026-03-19,2,58.711666666666666,3.3,Despejado,0.0
+2026-03-19,3,57.24,3.3,Parcialmente nublado,0.0
+2026-03-19,4,58.254,3.2,Parcialmente nublado,0.0
+2026-03-19,5,63.14,3.3,Despejado,0.0
+2026-03-19,6,69.005443438581,3.1,Despejado,0.0
+2026-03-19,7,69.005443438581,4.1,Despejado,0.0
+2026-03-19,8,69.005443438581,12.7,Soleado,0.0
+2026-03-19,9,71.77166666666666,15.2,Soleado,0.0
+2026-03-19,10,70.69666666666667,17.2,Soleado,0.0
+2026-03-19,11,70.80799999999999,18.1,Soleado,0.0
+2026-03-19,12,69.005443438581,19.0,Nublado,0.0
+2026-03-19,13,70.35666666666667,20.1,Nublado,0.0
+2026-03-19,14,70.6625,19.9,Lluvia moderada a intervalos,0.0
+2026-03-19,15,70.524,19.5,Lluvia moderada a intervalos,0.0
+2026-03-19,16,70.32333333333334,18.5,Lluvia moderada a intervalos,0.1
+2026-03-19,17,68.20166666666667,16.9,Lluvia moderada a intervalos,0.1
+2026-03-19,18,70.38399999999999,13.9,Lluvia moderada a intervalos,0.1
+2026-03-19,19,70.77166666666666,5.3,Parcialmente nublado,0.0
+2026-03-19,20,70.84166666666665,4.4,Despejado,0.0
+2026-03-19,21,73.98142857142857,4.4,Despejado,0.0
+2026-03-19,22,67.976,4.5,Despejado,0.0
+2026-03-19,23,69.31333333333333,4.2,Despejado,0.0
+2026-03-20,0,70.23333333333333,3.3,Despejado,0.0
+2026-03-20,1,67.49666666666667,3.0,Despejado,0.0
+2026-03-20,2,65.964,2.7,Despejado,0.0
+2026-03-20,3,63.85333333333333,2.4,Despejado,0.0
+2026-03-20,4,60.711666666666666,2.4,Despejado,0.0
+2026-03-20,5,64.24,2.1,Despejado,0.0
+2026-03-20,6,72.84166666666667,1.8,Despejado,0.0
+2026-03-20,7,72.71000000000001,3.0,Despejado,0.0
+2026-03-20,8,72.13166666666667,12.6,Soleado,0.0
+2026-03-20,9,70.84833333333334,15.4,Soleado,0.0
+2026-03-20,10,70.73333333333333,17.8,Soleado,0.0
+2026-03-20,11,70.60285714285715,19.5,Soleado,0.0
+2026-03-20,12,71.214,20.8,Soleado,0.0
+2026-03-20,13,71.22166666666668,21.2,Soleado,0.0
+2026-03-20,14,71.09,21.0,Soleado,0.0
+2026-03-20,15,70.2,19.1,Lluvia moderada a intervalos,0.0
+2026-03-20,16,70.79333333333334,17.3,Lluvia moderada a intervalos,0.1
+2026-03-20,17,70.46666666666667,15.8,Lluvia moderada a intervalos,0.1
+2026-03-20,18,70.75800000000001,13.7,Lluvia moderada a intervalos,0.0
+2026-03-20,19,69.55333333333333,9.2,Parcialmente nublado,0.0
+2026-03-20,20,69.84833333333334,7.0,Parcialmente nublado,0.0
+2026-03-20,21,77.046,5.3,Parcialmente nublado,0.0
+2026-03-20,22,76.62,3.9,Parcialmente nublado,0.0
+2026-03-20,23,71.39,3.6,Parcialmente nublado,0.0
+2026-03-21,0,71.03666666666668,3.0,Despejado,0.0
+2026-03-21,1,73.774,2.8,Despejado,0.0
+2026-03-21,2,73.97285714285714,2.4,Despejado,0.0
+2026-03-21,3,75.33333333333333,2.2,Despejado,0.0
+2026-03-21,4,75.89,2.3,Despejado,0.0
+2026-03-21,5,69.005443438581,2.5,Despejado,0.0
+2026-03-21,6,72.06,2.6,Despejado,0.0
+2026-03-21,7,71.60166666666667,4.0,Despejado,0.0
+2026-03-21,8,71.29333333333334,12.6,Soleado,0.0
+2026-03-21,9,70.57333333333334,15.2,Soleado,0.0
+2026-03-21,10,69.39333333333333,17.3,Soleado,0.0
+2026-03-21,11,71.01833333333333,18.9,Soleado,0.0
+2026-03-21,12,70.294,19.3,Lluvia moderada a intervalos,0.4
+2026-03-21,13,70.52333333333333,19.9,Lluvia moderada a intervalos,0.4
+2026-03-21,14,70.44833333333334,19.2,Lluvia moderada a intervalos,0.3
+2026-03-21,15,70.142,17.4,Lluvia moderada a intervalos,0.3
+2026-03-21,16,69.95,16.2,Intervalos de lluvias ligeras con tormenta en la región,0.3
+2026-03-21,17,68.08,15.4,Intervalos de lluvias ligeras con tormenta en la región,0.2
+2026-03-21,18,69.038,13.4,Intervalos de lluvias ligeras con tormenta en la región,0.1
+2026-03-21,19,69.88199999999999,9.7,Lluvia moderada a intervalos,0.0
+2026-03-21,20,68.97,8.2,Neblina,0.0
+2026-03-21,21,70.12833333333333,5.5,Parcialmente nublado,0.0
+2026-03-21,22,71.53999999999999,4.7,Parcialmente nublado,0.0
+2026-03-21,23,71.16166666666666,3.7,Despejado,0.0
+2026-03-22,0,74.97333333333334,3.5,Despejado,0.0
+2026-03-22,1,76.85166666666667,3.1,Parcialmente nublado,0.0
+2026-03-22,2,74.90333333333332,2.6,Parcialmente nublado,0.0
+2026-03-22,3,70.49199999999999,2.4,Despejado,0.0
+2026-03-22,4,65.03,2.2,Despejado,0.0
+2026-03-22,5,64.785,2.0,Despejado,0.0
+2026-03-22,6,71.8775,2.0,Despejado,0.0
+2026-03-22,7,62.615,3.5,Despejado,0.0
+2026-03-22,8,61.798,12.0,Soleado,0.0
+2026-03-22,9,69.87333333333333,14.2,Soleado,0.0
+2026-03-22,10,69.29333333333334,16.4,Lluvia moderada a intervalos,0.0
+2026-03-22,11,68.60000000000001,18.2,Lluvia moderada a intervalos,0.0
+2026-03-22,12,69.54166666666667,19.5,Lluvia moderada a intervalos,0.1
+2026-03-22,13,70.00833333333334,20.5,Lluvia moderada a intervalos,0.2
+2026-03-22,14,69.07666666666667,20.6,Lluvia moderada a intervalos,0.3
+2026-03-22,15,67.65666666666667,19.7,Lluvia moderada a intervalos,0.3
+2026-03-22,16,68.52333333333333,17.7,Periodos de lluvia moderada,0.6
+2026-03-22,17,68.70833333333333,16.3,Intervalos de lluvias ligeras con tormenta en la región,0.6
+2026-03-22,18,68.906,14.6,Lluvia moderada a intervalos,0.3
+2026-03-22,19,67.44833333333334,9.9,Lluvia moderada a intervalos,0.2
+2026-03-22,20,67.80166666666666,10.2,Neblina,0.1
+2026-03-22,21,67.126,10.8,Neblina,0.0
+2026-03-22,22,67.10833333333333,8.4,Neblina,0.1
+2026-03-22,23,65.62,8.7,Neblina,0.1
+2026-03-23,0,70.015,12.0,Lluvia moderada a intervalos,0.0
+2026-03-23,1,62.41,8.3,Lluvia moderada a intervalos,0.0
+2026-03-23,2,58.50666666666666,10.1,Lluvia moderada a intervalos,0.0
+2026-03-23,3,58.325,10.4,Lluvia moderada a intervalos,0.1
+2026-03-23,4,59.794,10.0,Lluvia moderada a intervalos,0.0
+2026-03-23,5,64.83,9.1,Lluvia moderada a intervalos,0.0
+2026-03-23,6,72.51333333333334,7.5,Parcialmente nublado,0.0
+2026-03-23,7,72.865,11.2,Lluvia moderada a intervalos,0.0
+2026-03-23,8,71.79166666666667,13.1,Lluvia moderada a intervalos,0.0
+2026-03-23,9,70.845,14.6,Lluvia moderada a intervalos,0.0
+2026-03-23,10,69.005443438581,16.5,Lluvia moderada a intervalos,0.3
+2026-03-23,11,69.005443438581,18.2,Lluvia moderada a intervalos,0.6
+2026-03-23,12,69.005443438581,18.6,Lluvia moderada a intervalos,1.0
+2026-03-23,13,69.005443438581,18.4,Lluvia moderada a intervalos,1.6
+2026-03-23,14,69.005443438581,17.6,Lluvia moderada a intervalos,2.0
+2026-03-23,15,70.082,17.5,Lluvia moderada a intervalos,2.2
+2026-03-23,16,70.035,16.5,Lluvia moderada a intervalos,1.5
+2026-03-23,17,70.89,15.7,Lluvia moderada a intervalos,1.1
+2026-03-23,18,69.155,14.3,Lluvia moderada a intervalos,0.7
+2026-03-23,19,68.115,12.7,Ligeras precipitaciones,0.3
+2026-03-23,20,69.005443438581,12.5,Lluvia moderada a intervalos,0.0
+2026-03-23,21,65.55,12.2,Neblina,0.0
+2026-03-23,22,66.5,11.2,Neblina,0.0
+2026-03-23,23,70.10000000000001,11.1,Neblina,0.1
+2026-03-24,0,70.705,9.7,Neblina,0.0
+2026-03-24,1,70.662,7.7,Neblina,0.0
+2026-03-24,2,58.02333333333333,6.9,Neblina,0.0
+2026-03-24,3,58.37166666666667,6.2,Neblina,0.0
+2026-03-24,4,59.645,5.9,Neblina,0.0
+2026-03-24,5,65.532,6.7,Neblina,0.0
+2026-03-24,6,69.005443438581,8.0,Neblina,0.0
+2026-03-24,7,69.005443438581,11.7,Neblina,0.0
+2026-03-24,8,69.005443438581,12.8,Lluvia moderada a intervalos,0.0
+2026-03-24,9,69.925,13.5,Lluvia moderada a intervalos,0.1
+2026-03-24,10,69.5,14.0,Ligeras precipitaciones,0.2
+2026-03-24,11,69.17857142857143,14.8,Ligeras precipitaciones,0.4
+2026-03-24,12,70.56,16.7,Lluvia moderada a intervalos,0.4
+2026-03-24,13,70.07333333333334,17.7,Lluvia moderada a intervalos,0.8
+2026-03-24,14,70.54166666666667,17.5,Lluvia moderada a intervalos,1.3
+2026-03-24,15,70.74600000000001,17.1,Lluvia moderada a intervalos,1.6
+2026-03-24,16,69.66166666666668,16.6,Lluvia moderada a intervalos,1.7
+2026-03-24,17,68.94999999999999,15.9,Lluvia moderada a intervalos,1.2
+2026-03-24,18,70.46000000000001,14.6,Lluvia moderada a intervalos,0.3
+2026-03-24,19,69.872,11.9,Lluvia moderada a intervalos,0.5
+2026-03-24,20,67.72666666666667,13.3,Ligeras precipitaciones,0.2
+2026-03-24,21,67.34333333333333,13.1,Neblina,0.0
+2026-03-24,22,65.18833333333333,10.4,Neblina,0.0
+2026-03-24,23,64.664,10.0,Neblina,0.0
+2026-03-25,0,66.98,4.6,Parcialmente nublado,0.0
+2026-03-25,1,64.53666666666668,4.3,Parcialmente nublado,0.0
+2026-03-25,2,57.90599999999999,4.2,Parcialmente nublado,0.0
+2026-03-25,3,57.45399999999999,4.4,Parcialmente nublado,0.0
+2026-03-25,4,63.97,4.0,Parcialmente nublado,0.0
+2026-03-25,5,63.64,3.6,Parcialmente nublado,0.0
+2026-03-25,6,69.005443438581,3.4,Parcialmente nublado,0.0
+2026-03-25,7,72.64500000000001,7.9,Parcialmente nublado,0.0
+2026-03-25,8,71.644,12.5,Lluvia moderada a intervalos,0.0
+2026-03-25,9,70.295,14.3,Lluvia moderada a intervalos,0.0
+2026-03-25,10,70.94,16.1,Despejado,0.2
+2026-03-25,11,69.896,17.5,Despejado,0.4
+2026-03-25,12,70.79333333333334,18.5,Despejado,0.7
+2026-03-25,13,70.355,18.3,Despejado,1.2
+2026-03-25,14,70.605,17.7,Lluvia moderada a intervalos,1.6
+2026-03-25,15,70.17,17.0,Lluvia moderada a intervalos,1.8
+2026-03-25,16,70.60833333333333,16.3,Parcialmente nublado,1.4
+2026-03-25,17,71.60999999999999,15.7,Parcialmente nublado,1.2
+2026-03-25,18,70.29666666666667,14.3,Lluvia moderada a intervalos,0.6
+2026-03-25,19,69.175,8.5,Lluvia moderada a intervalos,0.4
+2026-03-25,20,68.6625,10.3,Periodos de lluvia moderada,0.3
+2026-03-25,21,69.06,10.6,Intervalos de lluvias ligeras con tormenta en la región,0.0
+2026-03-25,22,66.348,10.7,Intervalos de lluvias ligeras con tormenta en la región,0.1
+2026-03-25,23,68.71,11.2,Lluvia moderada a intervalos,0.1
+2026-03-26,0,68.2,8.3,Ligeras precipitaciones,0.3
+2026-03-26,1,62.644000000000005,10.4,Ligeras precipitaciones,0.1
+2026-03-26,2,60.345,12.0,Neblina,0.1
+2026-03-26,3,63.55833333333334,12.2,Neblina,0.1
+2026-03-26,4,62.28666666666667,12.4,Neblina,0.1
+2026-03-26,5,67.022,12.2,Neblina,0.1
+2026-03-26,6,73.71499999999999,12.2,Neblina,0.1
+2026-03-26,7,72.92999999999999,12.4,Neblina,0.1
+2026-03-26,8,71.14,13.1,Ligeras precipitaciones,0.2
+2026-03-26,9,70.45333333333333,13.5,Llovizna,0.3
+2026-03-26,10,70.355,14.2,Ligeras precipitaciones,0.5
+2026-03-26,11,69.8725,15.5,Lluvia moderada a intervalos,0.9
+2026-03-26,12,70.74666666666667,16.2,Lluvia moderada a intervalos,1.1
+2026-03-26,13,70.57666666666667,16.3,Lluvia moderada a intervalos,1.3
+2026-03-26,14,70.018,16.0,Lluvia moderada a intervalos,1.4
+2026-03-26,15,70.09,16.3,Lluvia moderada a intervalos,1.4
+2026-03-26,16,69.08666666666666,16.1,Lluvia moderada a intervalos,1.4
+2026-03-26,17,70.71499999999999,15.4,Lluvia moderada a intervalos,0.7
+2026-03-26,18,71.338,14.0,Lluvia moderada a intervalos,0.6
+2026-03-26,19,70.51666666666667,11.0,Lluvia moderada a intervalos,0.1
+2026-03-26,20,71.39333333333333,12.0,Neblina,0.1
+2026-03-26,21,66.776,12.7,Neblina,0.0
+2026-03-26,22,67.30333333333333,12.7,Neblina,0.0
+2026-03-26,23,69.035,11.7,Neblina,0.0
+2026-03-27,0,70.48400000000001,6.1,Lluvia moderada a intervalos,0.0
+2026-03-27,1,71.00500000000001,6.2,Lluvia moderada a intervalos,0.0
+2026-03-27,2,69.42,8.4,Parcialmente nublado,0.0
+2026-03-27,3,66.115,9.1,Parcialmente nublado,0.0
+2026-03-27,4,65.87,9.2,Lluvia moderada a intervalos,0.0
+2026-03-27,5,69.005443438581,8.4,Lluvia moderada a intervalos,0.0
+2026-03-27,6,69.005443438581,7.7,Lluvia moderada a intervalos,0.0
+2026-03-27,7,72.806,11.0,Lluvia moderada a intervalos,0.0
+2026-03-27,8,71.0775,12.7,Lluvia moderada a intervalos,0.0
+2026-03-27,9,69.005443438581,13.9,Parcialmente nublado,0.1
+2026-03-27,10,69.005443438581,15.4,Lluvia moderada a intervalos,0.1
+2026-03-27,11,71.07499999999999,17.4,Lluvia moderada a intervalos,0.4
+2026-03-27,12,70.625,18.9,Lluvia moderada a intervalos,0.4
+2026-03-27,13,70.89666666666666,19.0,Lluvia moderada a intervalos,1.5
+2026-03-27,14,69.47,18.7,Lluvia moderada a intervalos,1.6
+2026-03-27,15,70.08333333333333,18.3,Lluvia moderada a intervalos,2.4
+2026-03-27,16,69.38,17.5,Lluvia moderada a intervalos,1.8
+2026-03-27,17,69.92500000000001,16.8,Lluvia moderada a intervalos,0.9
+2026-03-27,18,70.87333333333333,14.3,Lluvia moderada a intervalos,0.7
+2026-03-27,19,69.18,8.9,Neblina,0.1
+2026-03-27,20,69.005443438581,10.5,Neblina,0.0
+2026-03-27,21,76.68,9.6,Neblina,0.0
+2026-03-27,22,78.666,11.3,Ligeras precipitaciones,0.2
+2026-03-27,23,75.19,10.3,Llovizna a intervalos,0.4
+2026-03-28,0,72.522,13.1,Neblina,0.1
+2026-03-28,1,77.32666666666667,12.9,Neblina,0.1
+2026-03-28,2,69.005443438581,12.9,Neblina,0.0
+2026-03-28,3,75.51333333333334,10.8,Neblina,0.0
+2026-03-28,4,74.19500000000001,10.7,Lluvia moderada a intervalos,0.2
+2026-03-28,5,75.592,12.2,Lluvia moderada a intervalos,0.0
+2026-03-28,6,71.97749999999999,12.4,Lluvia moderada a intervalos,0.0
+2026-03-28,7,71.39166666666667,12.6,Ligeras precipitaciones,0.0
+2026-03-28,8,71.632,13.4,Ligeras precipitaciones,0.1
+2026-03-28,9,70.786,14.4,Niebla moderada,0.1
+2026-03-28,10,71.33000000000001,15.8,Niebla moderada,0.2
+2026-03-28,11,70.84,17.6,Neblina,0.3
+2026-03-28,12,70.85,18.8,Lluvia moderada a intervalos,0.5
+2026-03-28,13,69.005443438581,19.7,Lluvia moderada a intervalos,0.6
+2026-03-28,14,69.53666666666668,19.4,Lluvia moderada a intervalos,1.1
+2026-03-28,15,81.195,18.4,Lluvia moderada a intervalos,1.2
+2026-03-28,16,68.16000000000001,17.8,Periodos de lluvia moderada,1.2
+2026-03-28,17,69.26599999999999,17.0,Periodos de lluvia moderada,0.3
+2026-03-28,18,68.44666666666667,13.7,Intervalos de lluvias ligeras con tormenta en la región,0.2
+2026-03-28,19,68.878,8.2,Intervalos de lluvias ligeras con tormenta en la región,0.1
+2026-03-28,20,72.38,10.0,Intervalos de lluvias ligeras con tormenta en la región,0.1
+2026-03-28,21,70.36857142857143,12.6,Lluvia moderada a intervalos,0.0
+2026-03-28,22,73.26,13.2,Neblina,0.0
+2026-03-28,23,71.67833333333333,13.0,Llovizna a intervalos,0.2
+2026-03-29,0,71.6,12.7,Neblina,0.0
+2026-03-29,1,69.005443438581,12.9,Neblina,0.0
+2026-03-29,2,73.97,12.5,Lluvia moderada a intervalos,0.0
+2026-03-29,3,72.532,12.4,Lluvia moderada a intervalos,0.0
+2026-03-29,4,65.645,12.4,Lluvia moderada a intervalos,0.0
+2026-03-29,5,67.63166666666666,10.4,Lluvia moderada a intervalos,0.0
+2026-03-29,6,71.27799999999999,10.3,Lluvia moderada a intervalos,0.0
+2026-03-29,7,68.115,12.5,Parcialmente nublado,0.0
+2026-03-29,8,74.85000000000001,13.6,Parcialmente nublado,0.0
+2026-03-29,9,68.80000000000001,15.3,Lluvia moderada a intervalos,0.1
+2026-03-29,10,69.005443438581,17.3,Lluvia moderada a intervalos,0.0
+2026-03-29,11,68.02250000000001,19.1,Lluvia moderada a intervalos,0.0
+2026-03-29,12,69.005443438581,20.3,Lluvia moderada a intervalos,0.2
+2026-03-29,13,68.87,20.6,Lluvia moderada a intervalos,0.9
+2026-03-29,14,67.74833333333333,19.3,Lluvia moderada a intervalos,1.0
+2026-03-29,15,68.82666666666667,18.1,Lluvia moderada a intervalos,0.9
+2026-03-29,16,70.25,17.3,Intervalos de lluvias ligeras con tormenta en la región,1.2
+2026-03-29,17,69.99199999999999,16.2,Intervalos de lluvias ligeras con tormenta en la región,2.0
+2026-03-29,18,67.16,13.5,Intervalos de lluvias ligeras con tormenta en la región,0.5
+2026-03-29,19,67.87,8.6,Lluvia moderada a intervalos,0.8
+2026-03-29,20,66.65333333333332,10.9,Ligeras precipitaciones,1.4
+2026-03-29,21,69.005443438581,10.2,Ligeras precipitaciones,0.4
+2026-03-29,22,67.14,10.1,Neblina,0.1
+2026-03-29,23,68.73166666666667,10.3,Ligeras precipitaciones,0.4
+2026-03-30,0,67.6,10.7,Ligeras precipitaciones,0.2
+2026-03-30,1,69.005443438581,9.4,Ligeras precipitaciones,0.0
+2026-03-30,2,69.005443438581,12.1,Neblina,0.0
+2026-03-30,3,59.88666666666666,12.3,Neblina,0.0
+2026-03-30,4,59.6,12.6,Neblina,0.0
+2026-03-30,5,66.02799999999999,12.5,Lluvia moderada a intervalos,0.1
+2026-03-30,6,72.99000000000001,12.2,Lluvia moderada a intervalos,0.2
+2026-03-30,7,72.05,12.6,Lluvia moderada a intervalos,0.1
+2026-03-30,8,71.26166666666667,13.3,Lluvia moderada a intervalos,0.2
+2026-03-30,9,75.27333333333333,14.5,Lluvia moderada a intervalos,0.1
+2026-03-30,10,70.31333333333333,16.2,Lluvia moderada a intervalos,0.2
+2026-03-30,11,70.678,17.9,Lluvia moderada a intervalos,0.4
+2026-03-30,12,70.15666666666667,18.1,Lluvia moderada a intervalos,0.8
+2026-03-30,13,70.31333333333333,18.8,Lluvia moderada a intervalos,0.7
+2026-03-30,14,69.882,18.5,Lluvia moderada a intervalos,1.3
+2026-03-30,15,69.005443438581,18.1,Lluvia moderada a intervalos,1.3
+2026-03-30,16,70.78,16.9,Intervalos de lluvias ligeras con tormenta en la región,1.4
+2026-03-30,17,69.805,15.3,Periodos de lluvia moderada,0.7
+2026-03-30,18,69.005443438581,13.7,Intervalos de lluvias ligeras con tormenta en la región,1.0
+2026-03-30,19,68.2,12.1,Intervalos de lluvias ligeras con tormenta en la región,0.3
+2026-03-30,20,67.46666666666667,12.5,Ligeras precipitaciones,0.0
+2026-03-30,21,66.925,12.3,Ligeras precipitaciones,0.1
+2026-03-30,22,64.99199999999999,11.1,Neblina,0.0
+2026-03-30,23,66.90666666666667,11.9,Neblina,0.1
+2026-03-31,0,66.19666666666667,11.8,Ligeras precipitaciones,0.3
+2026-03-31,1,62.95,10.6,Ligeras precipitaciones,0.1
+2026-03-31,2,58.43833333333333,10.5,Neblina,0.1
+2026-03-31,3,56.25666666666666,9.8,Neblina,0.1
+2026-03-31,4,55.234,8.6,Neblina,0.1
+2026-03-31,5,65.54166666666667,8.1,Neblina,0.1
+2026-03-31,6,72.23,9.6,Neblina,0.0
+2026-03-31,7,72.70333333333333,12.2,Lluvia moderada a intervalos,0.0
+2026-03-31,8,71.99,13.5,Lluvia moderada a intervalos,0.1
+2026-03-31,9,69.005443438581,15.2,Lluvia moderada a intervalos,0.2
+2026-03-31,10,69.005443438581,16.0,Lluvia moderada a intervalos,0.3
+2026-03-31,11,69.005443438581,17.1,Lluvia moderada a intervalos,0.6
+2026-03-31,12,69.005443438581,18.3,Intervalos de lluvias ligeras con tormenta en la región,0.6
+2026-03-31,13,70.38,18.5,Periodos de lluvia moderada,0.8
+2026-03-31,14,70.22999999999999,18.0,Intervalos de lluvias ligeras con tormenta en la región,0.9
+2026-03-31,15,69.25833333333334,17.3,Intervalos de lluvias ligeras con tormenta en la región,1.1
+2026-03-31,16,69.61666666666666,15.9,Intervalos de lluvias ligeras con tormenta en la región,0.9
+2026-03-31,17,69.80199999999999,14.6,Ligeras precipitaciones,1.8
+2026-03-31,18,69.46666666666667,13.2,Lluvias fuertes o moderadas,2.7
+2026-03-31,19,69.145,12.4,Ligeras precipitaciones,0.4
+2026-03-31,20,67.51599999999999,11.7,Lluvia moderada a intervalos,0.0
+2026-03-31,21,74.14,10.3,Lluvia moderada a intervalos,0.0
+2026-03-31,22,67.92,9.4,Neblina,0.0
+2026-03-31,23,67.845,8.7,Neblina,0.0
